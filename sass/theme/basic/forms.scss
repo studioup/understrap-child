@@ -1,0 +1,50 @@
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: rem-calc(-9999px);
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: rem-calc(20px);
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left:0; top: rem-calc(2px);
+  width: rem-calc(12px); height: rem-calc(11px);
+  border: rem-calc(1px) solid $brand-primary;
+  background: #fff;
+  border-radius: 0px;
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '';
+  position: absolute;
+  top: rem-calc(2px); left: rem-calc(0px);
+  width: rem-calc(12px); height: rem-calc(11px);
+  background: $brand-primary;
+  border: rem-calc(1px) solid $brand-primary;
+  transition: all .2s;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted lighten($brand-primary,0.10);
+}

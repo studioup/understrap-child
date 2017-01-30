@@ -1,0 +1,32 @@
+.btn-secondary {
+  color: $aqua;
+  position: relative;
+  &:after {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    border-bottom: rem-calc(1px) solid $brand-primary;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s ease all;
+  }
+  &:hover{
+    color: $aqua;
+    background: none;
+    &:after {
+      bottom: rem-calc(5px);
+    }
+  }
+}
+
+.btn--has-arrow {
+    position: relative;
+    text-align: left;
+    padding-left: 0;
+    &:after {
+      content: '>';
+      position: absolute;
+      right: 0;
+      color: red;
+    }
+}

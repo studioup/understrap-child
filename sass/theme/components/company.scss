@@ -1,0 +1,20 @@
+.company__slider {
+
+  .slick-dots li:nth-child(1) button:before {content: ' ';width: 14px;height: 14px;border-radius: 100%;border: 1px solid #869D96;opacity: 1;}
+  .slick-dots li:nth-child(2) button:before {content: ' ';margin-left: 1px; width: 12px;height: 12px;border: 1px solid #869D96;opacity: 1;transform: rotate(45deg);margin-top: 1px;}
+  .slick-dots li:nth-child(3) button:before {content: ' ';width: 14px;height: 14px;border: 1px solid #869D96;opacity: 1;}
+  .slick-dots li.slick-active button:before { background: #869D96; }
+
+
+  .slick-dots {
+    bottom: 0;
+    width: rem-calc(30px);
+  }
+}
+
+.anim_01 {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+    svg {position: relative;right: rem-calc(-60px);}
+}

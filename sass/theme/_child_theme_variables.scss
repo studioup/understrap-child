@@ -1,15 +1,78 @@
 // Use this file to overwrite the basic Bootstrap variables and add your own variables
-// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder. 
+// To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
 // Just copy a variable from /sass/bootstrap/_variables.scss, paste it here and edit the value.
 // As example you find one of the most important Bootstrap variable below: $brand-primary.
 // Thats the ugly Bootstrap blue used for all the links, primary buttons etc.
 // Just add your color code here, compile the theme.scss file to change this color everywhere
 
 
-$brand-primary:         #fece00; //#ff6d5a
+$brand-primary:         #C92C49; //#ff6d5a
+$aqua:                  #2778AA;
+
+$alt-font:                'Lekton',sans-serif;
+$font-family-sans-serif:  'nimbus-sans',sans-serif;
+$headings-font-family:    'HKGrotesk',sans-serif;
+
+$enable-rounded:        false;
+$input-padding-x:                0.9rem;
+$input-padding-y:                0.94rem;
+$input-btn-border-width: 0;
+
+$btn-info-color:                 black;
+$btn-info-bg:                    white;
+$btn-info-border:                $btn-info-bg !default;
+$slick-font-path: '../fonts/';
+
+$font-size-h1: 4.35rem;
+$font-size-h2: 2.5rem;
+$font-size-h3: 1.875rem;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 980px
+);
+
+$spacer:   1rem;
+$spacer-x: $spacer;
+$spacer-y: $spacer;
+$spacers: (
+  0: (
+    x: 0,
+    y: 0
+  ),
+  1: (
+    x: ($spacer-x * .25),
+    y: ($spacer-y * .25)
+  ),
+  2: (
+    x: ($spacer-x * .5),
+    y: ($spacer-y * .5)
+  ),
+  3: (
+    x: $spacer-x,
+    y: $spacer-y
+  ),
+  4: (
+    x: ($spacer-x * 1.5),
+    y: ($spacer-y * 1.5)
+  ),
+  5: (
+    x: ($spacer-x * 3),
+    y: ($spacer-y * 3)
+  ),
+  6: (
+    x: ($spacer-x * 4),
+    y: ($spacer-y * 4)
+  ),
+  7: (
+    x: ($spacer-x * 6),
+    y: ($spacer-y * 6)
+  )
+);
 
 // Basics of a navbar
-$navbar-height:                    60px;
+$navbar-height:                    95px;
 $navbar-margin-bottom:             0px;
 $navbar-border-radius:             0px;
-

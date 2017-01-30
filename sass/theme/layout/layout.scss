@@ -1,0 +1,22 @@
+.layout {
+  display: flex;
+  .layout__col1, .layout__col3 {
+    flex-grow: 1;
+    width: 20%;
+    flex-direction: column;
+    display: flex;
+  }
+  .layout__col1 {
+    justify-content: flex-end;
+  }
+  .layout__col3 {
+    justify-content: flex-start;
+  }
+  .layout__col2 {
+    display: flex;
+    flex-shrink: 0;
+    padding: 0;
+    flex-direction: column;
+  }
+
+}

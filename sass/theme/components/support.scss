@@ -1,0 +1,34 @@
+.support {
+  position:relative;
+  .support__corner {
+    position:absolute;
+    &.support__corner--lt {
+        left: 0;
+        top:0;
+    }
+    &.support__corner--rb {
+        right: 0;
+        bottom:0;
+        transform: rotate(180deg);
+    }
+  }
+  .support__grid {
+    position:absolute;
+    right:0;
+    top:0;
+  }
+  .support__anim {
+    position: absolute;
+    bottom: rem-calc(40px);
+    right: rem-calc(-30px);
+    width: rem-calc(170px);
+  }
+}
+
+.support2 {
+  position: relative;
+  .support2__anim {
+    position: absolute;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="55px" height="407px" viewBox="0 0 55 407" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
+    <title>Fisarmonica</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="33.1066017 3.10660172 33.1066017 18.1066017 18.1066017 18.1066017"></polygon>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="15" height="15" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <polygon id="path-3" points="34.1066017 409.106602 34.1066017 424.106602 19.1066017 424.106602"></polygon>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="15" height="15" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ABXXXX_mockup_HOME" transform="translate(-318.000000, -1589.000000)" stroke="#869D96">
+            <g id="Fisarmonica" transform="translate(319.000000, 1579.000000)">
+                <path d="M0,117 L53,117" id="Line-Copy-24" stroke-width="0.5" stroke-linecap="square"></path>
+                <path d="M0,54 L53,54" id="Line-Copy-38" stroke-width="0.5" stroke-linecap="square"></path>
+                <path d="M19,132.5 L34,132.5" id="Line-Copy-26" stroke-linecap="square"></path>
+                <path d="M19,69.5 L34,69.5" id="Line-Copy-39" stroke-linecap="square"></path>
+                <path d="M12,149.25 L42,149.25" id="Line-Copy-27" stroke-width="0.5" stroke-linecap="square"></path>
+                <path d="M12,86.25 L42,86.25" id="Line-Copy-40" stroke-width="0.5" stroke-linecap="square"></path>
+                <path d="M19,164.5 L34,164.5" id="Line-Copy-26" stroke-linecap="square"></path>
+                <path d="M19,101.5 L34,101.5" id="Line-Copy-41" stroke-linecap="square"></path>
+                <path d="M0,181.25 L53,181.25" id="Line-Copy-28" stroke-width="0.5" stroke-linecap="square"></path>
+                <path d="M19,196.5 L34,196.5" id="Line-Copy-29" stroke-linecap="square"></path>
+                <path d="M12,213.25 L42,213.25" id="Line-Copy-30" stroke-width="0.5" stroke-linecap="square"></path>
+                <path d="M19,228.5 L34,228.5" id="Line-Copy-29" stroke-linecap="square"></path>
+                <path d="M0,245.25 L53,245.25" id="Line-Copy-31" stroke-width="0.5" stroke-linecap="square"></path>
+                <path d="M19,260.5 L34,260.5" id="Line-Copy-32" stroke-linecap="square"></path>
+                <path d="M12,276.25 L42,276.25" id="Line-Copy-33" stroke-width="0.5" stroke-linecap="square"></path>
+                <path d="M19,292.5 L34,292.5" id="Line-Copy-32" stroke-linecap="square"></path>
+                <path d="M0,308.25 L53,308.25" id="Line-Copy-34" stroke-width="0.5" stroke-linecap="square"></path>
+                <path d="M19,323.5 L34,323.5" id="Line-Copy-35" stroke-linecap="square"></path>
+                <path d="M12,340.25 L42,340.25" id="Line-Copy-36" stroke-width="0.5" stroke-linecap="square"></path>
+                <path d="M19,355.5 L34,355.5" id="Line-Copy-35" stroke-linecap="square"></path>
+                <path d="M0,373 L53,373" id="Line-Copy-37" stroke-width="0.5" stroke-linecap="square"></path>
+                <use id="Rectangle-5-Copy-2" mask="url(#mask-2)" stroke-width="4" transform="translate(25.606602, 10.606602) rotate(-315.000000) translate(-25.606602, -10.606602) " xlink:href="#path-1"></use>
+                <use id="Rectangle-5-Copy" mask="url(#mask-4)" stroke-width="4" transform="translate(26.606602, 416.606602) rotate(-135.000000) translate(-26.606602, -416.606602) " xlink:href="#path-3"></use>
+            </g>
+        </g>
+    </g>
+</svg>

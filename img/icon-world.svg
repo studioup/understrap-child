@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
+    <title>World</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HEADER" transform="translate(-1127.000000, -38.000000)" stroke="#2778AA">
+            <g id="World" transform="translate(1128.000000, 39.000000)">
+                <path d="M1,8.41176471 L17.3292294,8.41176471" id="Line-Copy" stroke-linecap="square"></path>
+                <ellipse id="Oval" cx="8.89411724" cy="8.89411724" rx="8.89411724" ry="8.89411724"></ellipse>
+                <ellipse id="Oval" cx="9" cy="8.89411724" rx="4" ry="8.89411724"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

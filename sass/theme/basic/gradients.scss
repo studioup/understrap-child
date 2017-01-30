@@ -1,0 +1,7 @@
+.gradient-blue {
+  @include gradient-text('linear-gradient(to right,#2B9DBC, #2813A0)', 'light');
+}
+
+.gradient-red {
+  @include gradient-text('linear-gradient(135deg, rgba(201,44,73,1) 0%,rgba(242,84,91,1) 50%,rgba(201,44,73,1) 100%)', 'light');
+}

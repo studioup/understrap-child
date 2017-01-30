@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="490px" height="371px" viewBox="0 0 490 371" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
+    <title>Grid</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square" stroke-dasharray="10,10,10">
+        <g id="ABXXXX_mockup_HOME" transform="translate(-455.000000, -2145.000000)" stroke="#869D96" stroke-width="0.5">
+            <g id="ENERGY-SAVING" transform="translate(235.000000, 2145.000000)">
+                <g id="Grid" transform="translate(220.000000, 0.000000)">
+                    <path d="M0,306.25 L500,306.25" id="Line"></path>
+                    <path d="M0,185.25 L500,185.25" id="Line-Copy-16"></path>
+                    <path d="M0,65.25 L500,65.25" id="Line-Copy-18"></path>
+                    <path d="M61.5,0.5 L61.5,371.156175" id="Line-Copy-19"></path>
+                    <path d="M187.5,0.5 L187.5,371.156175" id="Line-Copy-21"></path>
+                    <path d="M313.5,0.5 L313.5,371.156175" id="Line-Copy-23"></path>
+                    <path d="M439.5,0.5 L439.5,371.156175" id="Line-Copy-25"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

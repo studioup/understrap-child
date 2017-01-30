@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'HKGrotesk';
+  src: url('../fonts/HKGrotesk-Bold-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/HKGrotesk-Bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/HKGrotesk-Bold-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/HKGrotesk-Bold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/HKGrotesk-Bold-webfont.svg#HKGrotesk-Bold') format('svg'); /* Legacy iOS */
+  font-weight: bold;   
+}
+@font-face {
+  font-family: 'HKGrotesk';
+  src: url('../fonts/HKGrotesk-SemiBold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/HKGrotesk-SemiBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/HKGrotesk-SemiBold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/HKGrotesk-SemiBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/HKGrotesk-SemiBold.svg#HKGrotesk-SemiBold') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+}

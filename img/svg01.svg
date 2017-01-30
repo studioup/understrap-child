@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="387px" height="387px" viewBox="0 0 387 387" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ABXXXX_mockup_HOME" transform="translate(-891.000000, -767.000000)" stroke="#869D96">
+            <g id="Group-4" transform="translate(1084.642903, 960.642903) rotate(-120.000000) translate(-1084.642903, -960.642903) translate(891.642903, 767.642903)">
+                <circle id="Oval-3" stroke-width="0.5" stroke-dasharray="10,10,10" cx="193" cy="193" r="193"></circle>
+                <circle id="Oval-3" cx="194" cy="194" r="140"></circle>
+                <g id="Group-2" transform="translate(193.000000, 333.000000) scale(-1, 1) translate(-193.000000, -333.000000) translate(178.000000, 318.000000)" stroke-width="2">
+                    <circle id="Oval" fill="#FFFFFF" cx="15" cy="15" r="15"></circle>
+                    <path d="M4.5,4.5 L25.5059515,25.5059515" id="Line"></path>
+                </g>
+                <g id="Group-7" transform="translate(102.000000, 102.000000)">
+                    <path d="M92,184 C142.810197,184 184,142.810197 184,92 C184,41.189803 142.810197,4.54747351e-13 92,4.54747351e-13" id="Oval-10" stroke-width="0.5"></path>
+                    <path d="M0,184 C50.810197,184 92,142.810197 92,92 C92,41.189803 50.810197,0 0,0" id="Oval-10" stroke-width="10" transform="translate(46.000000, 92.000000) scale(-1, 1) translate(-46.000000, -92.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
