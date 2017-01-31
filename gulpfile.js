@@ -88,7 +88,8 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
     gulp.watch('./css/child-theme.css', ['cssnano']);
-    gulp.watch([basePaths.dev + 'js/**/*.js'], ['scripts'])
+    gulp.watch([basePaths.dev + 'js/**/*.js'], ['scripts']);
+    gulp.watch('./customjs/*.js', ['scripts']);
 });
 
 // Run:
@@ -96,11 +97,11 @@ gulp.task('watch', function () {
 // Minifies CSS files
 gulp.task('cssnano', ['cleancss'], function(){
   return gulp.src('./css/*.css')
-    //.pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(plumber())
     .pipe(rename({suffix: '.min'}))
     //.pipe(cssnano({discardComments: {removeAll: true}}))
-    //.pipe(sourcemaps.write('./'))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./css/'));
 });
 
@@ -137,7 +138,7 @@ gulp.task('scripts', function() {
         // End - All BS4 stuff
         basePaths.dev + 'js/skip-link-focus-fix.js',
 
-        basePaths.dev + 'js/theme.js'
+        './customjs/theme.js'
     ];
   gulp.src(scripts)
     .pipe(concat('child-theme.min.js'))

@@ -1,7 +1,7 @@
 <div class="layout">
-  <div class="layout__col1  border-bottom">
+  <div class="layout__col1">
   </div>
-  <div class="layout__col2 container border-right border-bottom">
+  <div class="layout__col2 container border-right">
     <div class="row">
       <div class="col-sm-9 offset-sm-1">
         <div class="news-wrapper pt-7 pb-7">
@@ -47,10 +47,26 @@
         </div>
       </div>
       <div class="col-sm-2">
-        <div class="anim_03" id="anim03"></div>
+        <div class="anim_04" id="anim04"></div>
       </div>
     </div>
   </div>
   <div class="layout__col3">
   </div>
 </div>
+<div class="layout">
+  <div class="layout__col1">
+  </div>
+  <div class="layout__col2 container border-right">
+    <div class="row no-gutters">
+      <div class="border-top border-left col-sm-1 offset-sm-11">
+        <div class="go-top">
+          <a href="#">⇡ Top</a>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="layout__col3">
+  </div>

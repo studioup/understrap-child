@@ -9897,6 +9897,40 @@ h3, h4, .h3, .h4 {
 
 .news-list .news a {
   color: black; }
+  .news-list .news a:hover {
+    text-decoration: none; }
+
+#anim04 {
+  position: absolute;
+  width: 21rem;
+  right: -3.1875rem;
+  top: 50%;
+  transform: translateY(-76%); }
+
+.go-top {
+  display: inline-flex;
+  align-self: flex-end;
+  padding: 0.9375rem 1.25rem; }
+  .go-top a {
+    display: block;
+    color: black;
+    border-bottom: 0.0625rem solid #d9534f;
+    text-decoration: none; }
+
+footer h4 {
+  color: #d9534f;
+  font-weight: bold; }
+
+footer .footer-list {
+  list-style: none;
+  padding: 0;
+  font-size: 0.875rem; }
+  footer .footer-list a {
+    color: black;
+    font-size: 0.875rem; }
+  footer .footer-list.footer-list--inline {
+    display: flex;
+    justify-content: space-between; }
 
 .layout {
   display: flex; }
@@ -9914,3 +9948,5 @@ h3, h4, .h3, .h4 {
     flex-shrink: 0;
     padding: 0;
     flex-direction: column; }
+
+/*# sourceMappingURL=child-theme.min.css.map */

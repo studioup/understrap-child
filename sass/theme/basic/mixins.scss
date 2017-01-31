@@ -12,7 +12,7 @@
   @supports(mix-blend-mode: lighten) {
     display: inline-block;
     position: relative;
-
+ 
     &::before {
       content: '';
       display: block;
