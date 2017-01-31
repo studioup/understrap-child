@@ -131,7 +131,7 @@ gulp.task('scripts', function() {
         basePaths.dev + 'js/bodymovin.js',
         basePaths.dev + 'js/slick.js', // Must be loaded before BS4
         basePaths.dev + 'js/tether.js', // Must be loaded before BS4
-
+        //basePaths.dev + 'js/aos.js', // Must be loaded before BS4
         // Start - All BS4 stuff
         basePaths.dev + 'js/bootstrap4/bootstrap.js',
 
@@ -220,6 +220,13 @@ gulp.task('copy-assets', function() {
     gulp.src(basePaths.node + 'undescores-for-npm/js/*.js')
         .pipe(gulp.dest(basePaths.dev + '/js'));
 
+// Copy all AOS SCSS files
+    gulp.src(basePaths.node + 'aos/src/sass/*.scss')
+       .pipe(gulp.dest(basePaths.dev + '/sass/aos'));
+
+// AOS JS files
+   gulp.src(basePaths.node + 'aos/dist/*.js')
+       .pipe(gulp.dest(basePaths.dev + '/js'));
 
 // Copy Tether JS files
     gulp.src(basePaths.node + 'tether/dist/js/*.js')
