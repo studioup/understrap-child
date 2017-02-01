@@ -1,0 +1,39 @@
+article {
+  &.category-loop {
+    @extend .border-left;
+    @extend .border-top;
+    @extend .border-right;
+    @extend .border-bottom;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    .category-loop__image {
+      img {
+        width: 100%;
+        max-width: 100%;
+        padding: rem-calc(20px);
+      }
+      a {
+        display: block;
+      }
+    }
+    .category-loop__name {
+      min-height: rem-calc(85px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    h5 {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      width: 100%;
+      a {
+        display: block;
+        padding: 0 rem-calc(18px);
+        text-decoration: none;
+        color:black;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

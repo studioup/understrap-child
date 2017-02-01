@@ -1,7 +1,13 @@
 h1, .h1 {
   font-weight: normal;
   line-height: 1;
+  letter-spacing: rem-calc(-2px);
 }
+
+h2, .h2 {
+  letter-spacing: rem-calc(-1px);
+}
+
 
 h1, .h1 {
   &:before {
@@ -9,9 +15,13 @@ h1, .h1 {
   }
 }
 
-h3,h4, .h3, .h4 {
+h3, .h3 {
   font-family: $alt-font;
   font-weight: normal;
+}
+h4, .h4 {
+  font-family: $alt-font;
+  font-weight: 700;
 }
 
 .bold {

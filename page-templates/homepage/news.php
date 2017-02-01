@@ -70,3 +70,4 @@
   </div>
   <div class="layout__col3">
   </div>
+</div>

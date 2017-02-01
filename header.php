@@ -22,7 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
   <script src="https://use.typekit.net/nho1ejz.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
-  <link href="https://fonts.googleapis.com/css?family=Lekton" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lekton:400,700" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
@@ -36,6 +36,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content',
 		'understrap' ); ?></a>
 
-    <?php get_template_part( 'page-templates/nav', 'standard-right' ); ?>  
+    <?php get_template_part( 'page-templates/nav', 'standard-right' ); ?>
 
 	</div><!-- .wrapper-navbar end -->

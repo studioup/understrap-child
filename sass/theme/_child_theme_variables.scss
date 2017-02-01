@@ -27,6 +27,11 @@ $font-size-h1: 4.35rem;
 $font-size-h2: 2.5rem;
 $font-size-h3: 1.875rem;
 
+$breadcrumb-bg:                 white;
+$breadcrumb-divider-color:      black;
+$breadcrumb-active-color:       black;
+$breadcrumb-divider:            ">";
+
 $container-max-widths: (
   sm: 540px,
   md: 720px,

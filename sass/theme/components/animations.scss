@@ -1,0 +1,26 @@
+.support_anim01 {
+  position: absolute;
+    margin-left: -116px;
+    top: 50%;
+    transform: translateY(-30%);
+}
+
+.support_anim02 {
+  position: absolute;
+  right: -70px;
+}
+
+.anim_04 {
+    position: absolute;
+    width: rem-calc(336px);
+    right: rem-calc(-51px);
+    top: 50%;
+    transform: translateY(-76%);
+}
+
+.anim_01 {
+    display: inline-flex;    
+    align-items: center;
+    height: 100%;
+    svg {position: relative;right: rem-calc(-60px);}
+}

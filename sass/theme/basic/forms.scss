@@ -48,3 +48,71 @@
 [type="checkbox"]:not(:checked):focus + label:before {
   border: 1px dotted lighten($brand-primary,0.10);
 }
+
+.frm_form_fields  {
+  margin-right: rem-calc(-1px);
+}
+
+.form-field {
+    display: flex;
+    align-items: center;
+    position: relative;
+    label {
+        width: 30%;
+        flex-shrink: 0;
+        font-weight: bold;
+    }
+    input {
+        width: 100% !important;
+        border: 0;
+        border:1px solid $aqua;
+        margin-bottom: rem-calc(-1px);
+        padding: rem-calc(22px);
+        outline-width: 0;
+    }
+    textarea {
+        border:1px solid $aqua;
+        padding: rem-calc(22px);
+        outline-width: 0;
+        margin-bottom: rem-calc(-1px);
+    }
+    .frm_recaptcha {
+        margin-left: 30%;
+        border:1px solid $aqua;
+        width: 100%;
+        margin-bottom: rem-calc(-1px);
+        padding: 20px;
+    }
+    .frm_error {
+        position: absolute;
+        left: 30%;
+        padding-left: rem-calc(22px);
+        bottom: 0;
+        font-size: rem-calc(11px);
+        color: $red;
+    }
+
+    .frm_select {
+        border: 1px solid $aqua;
+        padding: rem-calc(22px);
+        width: 100%;
+        margin-bottom: -1px;
+        select {
+          border: 0;
+          background: none;
+          min-width:rem-calc(250px);
+        }
+    }
+}
+.frm_error_style {
+    color: $red;
+    margin-top: rem-calc(15px);
+    margin-bottom: rem-calc(15px);
+}
+.frm_submit {
+    margin-left: 30%;
+    border: 1px solid $aqua;
+    padding: rem-calc(22px);
+    text-align: center;
+    margin-bottom: rem-calc(-1px);
+}

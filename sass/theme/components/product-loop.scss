@@ -1,0 +1,30 @@
+article {
+  &.product-loop {
+    @extend .border-left;
+    @extend .border-top;
+    @extend .border-right;
+    @extend .border-bottom;
+    
+    margin-bottom: -1px;
+    .product-loop__image {
+      img {
+        width: 100%;
+        max-width: 100%;
+        padding: rem-calc(20px);
+      }
+      a {
+        display: block;
+      }
+    }
+    h4 {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      a {
+        display: block;
+        padding: rem-calc(18px);
+        text-decoration: none;
+      }
+    }
+  }
+}

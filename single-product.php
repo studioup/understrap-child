@@ -1,0 +1,97 @@
+<?php
+get_header();
+$container = get_theme_mod( 'understrap_container_type' );
+$terms = get_the_terms(get_the_ID(),"products-category");
+
+?>
+<div class="js-page" data-jsid="product">
+  <div class="layout">
+    <div class="layout__col1 border-bottom">
+    </div>
+    <div class="layout__col2 container border-bottom">
+      <div class="row no-gutters">
+        <div class="col-sm-12 border-right">
+          <ol class="breadcrumb pl-6 mt-5 mb-3">
+            <li class="breadcrumb-item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
+            <li class="breadcrumb-item"><a href="<?php echo get_post_type_archive_link( 'product' ); ?>">Products</a></li>
+            <?php foreach ($terms as &$term) { ?>
+              <li class="breadcrumb-item"><a href="<?php echo get_term_link( $term ); ?>"><?php echo $term->name ?></a></li>
+            <?php } ?>
+            <li class="breadcrumb-item"><?php the_title(); ?></li>
+          </ol>
+        </div>
+      </div>
+      <?php while ( have_posts() ) : the_post(); ?>
+
+        <div class="row no-gutters border-right">
+          <div class="col-sm-7">
+            <h1 class="h2 gradient-blue mb-4 mt-3"><?php the_title(); ?></h1>
+            <h5 class="pl-6 mb-4">
+              Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.
+            </h5>
+            <div class="product__content">
+              <?php the_content( 'Read more ...' ); ?>
+
+            </div>
+
+          </div>
+          <div class="col-sm-5 align-self-end">
+            <div class="row no-gutters">
+              <div class="col-sm-12 border-left border-top border-bottom">
+                <div class="product__image  background-dotted-red text-center p-4">
+                  <?php the_post_thumbnail() ?>
+                </div>
+              </div>
+            </div>
+            <div class="row no-gutters">
+              <div class="col-sm-6 border-left">
+                <div class="product__button text-center p-3">
+                <a href="#" class="btn btn-secondary">Specifications</a>
+                </div>
+              </div>
+              <div class="col-sm-6 border-left">
+                <div class="product__button text-center p-3">
+                <a href="#" class="btn btn-secondary">Download</a>
+              </div>
+              </div>
+            </div>
+            <div class="row no-gutters">
+              <div class="col-sm-12 border-left border-top">
+                <div class="product__button text-center p-3">
+                <a href="#" class="btn btn-secondary">Power Calculator</a>
+              </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      <?php endwhile; // end of the loop. ?>
+
+
+
+    </div>
+    <div class="layout__col3 border-bottom">
+    </div>
+  </div>
+  <div class="layout">
+    <div class="layout__col1 ">
+    </div>
+    <div class="layout__col2 container border-right">
+      <div class="row no-gutters pt-7">
+        <div class="border-left border-top col-sm-1 offset-sm-11">
+          <div class="go-top">
+            <a href="#">⇠ Back</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="layout__col3 background-dotted-red">
+    </div>
+  </div>
+</div>
+<?php
+get_footer(); ?>

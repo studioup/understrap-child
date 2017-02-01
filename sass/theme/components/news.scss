@@ -9,20 +9,13 @@
   }
 }
 
-#anim04 {
-    position: absolute;
-    width: rem-calc(336px);
-    right: rem-calc(-51px);
-    top: 50%;
-    transform: translateY(-76%);
-}
+
 
 .go-top {
-    display: inline-flex;
-    align-self: flex-end;
-    padding: rem-calc(15px) rem-calc(20px);
+    display: block;
+    text-align: center;
+    padding: rem-calc(15px) rem-calc(5px);
     a {
-        display: block;
         color: black;
         border-bottom: rem-calc(1px) solid $red;
         text-decoration: none;

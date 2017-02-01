@@ -1,0 +1,19 @@
+.contact-list {
+  font-size: rem-calc(18px);
+  line-height: 2.5;
+  a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    &:after {
+      content: '>';
+      transition: 0.3s ease all;
+      color: $red;
+      float: right
+    }
+    &:hover:after {
+      margin-right: rem-calc(10px);
+    }
+  }
+
+}

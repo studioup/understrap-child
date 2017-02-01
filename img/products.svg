@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="73px" height="247px" viewBox="0 0 73 247" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ABXXXX_mockup_PANPRODOTTI" transform="translate(-1001.000000, -218.000000)">
+            <g id="Group" transform="translate(1002.000000, 219.000000)">
+                <ellipse id="Oval-12" stroke="#869D96" fill="#FFFFFF" cx="35.2321429" cy="34.6363636" rx="34.5535714" ry="34.6363636"></ellipse>
+                <ellipse id="Oval-12-Copy-2" stroke="#869D96" stroke-width="2" fill="#FFFFFF" cx="35.2321429" cy="119.30303" rx="34.5535714" ry="34.6363636"></ellipse>
+                <path d="M36,90.8242424 C50.5524117,91.6230058 62.1071429,103.704541 62.1071429,118.491295 L54.4285714,118.491295 C54.4285714,107.956869 46.3084018,99.3235537 36,98.5375008 L36,90.8242424 Z" id="Combined-Shape" fill="#869D96"></path>
+                <path d="M34.4642857,63.1151515 C34.4642857,49.7711598 34.4642857,35.4060606 34.4642857,35.4060606 C34.4642857,35.4060606 21.1521905,35.4060606 6.82142857,35.4060606 C6.82142857,50.7093689 19.1975573,63.1151515 34.4642857,63.1151515 Z" id="Oval-12-Copy" fill="#869D96"></path>
+                <rect id="Rectangle-5" fill="#869D96" x="37.5357143" y="35.4060606" width="9.21428571" height="4.61818182"></rect>
+                <rect id="Rectangle-5-Copy-8" fill="#869D96" x="0.678571429" y="118.533333" width="35.3214286" height="3.07878788"></rect>
+                <polygon id="Rectangle-5-Copy-9" fill="#869D96" points="0.678571429 124.690909 17.5714286 124.690909 17.5714286 127.769697 2.21428571 127.769697"></polygon>
+                <polygon id="Rectangle-5-Copy-10" fill="#869D96" transform="translate(14.500000, 113.915152) scale(1, -1) translate(-14.500000, -113.915152) " points="0.678571429 112.375758 28.3214286 112.375758 28.3214286 115.454545 2.03113229 115.454545"></polygon>
+                <ellipse id="Oval-12-Copy-3" stroke="#869D96" fill="#FFFFFF" cx="36.5535714" cy="209.978162" rx="34.5535714" ry="34.6363636"></ellipse>
+                <path d="M20.5,179.5 L52.5,240.5" id="Line" stroke="#869D96" stroke-linecap="square"></path>
+                <rect id="Rectangle-14" fill="#869D96" transform="translate(36.176897, 213.634697) rotate(-28.000000) translate(-36.176897, -213.634697) " x="33.8733257" y="200.549848" width="4.60714286" height="26.169697"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

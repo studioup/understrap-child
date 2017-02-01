@@ -1,0 +1,12 @@
+.breadcrumb {
+  margin: 0;
+  font-family: $alt-font;
+  a {
+    color: black;
+  }
+  .breadcrumb-item {
+    &:first-child:before {
+      content: '——— ';
+    }
+  }
+}
