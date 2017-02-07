@@ -1,7 +1,7 @@
-<div class="layout">
+<div class="layout no-overflow">
   <div class="layout__col1 border-bottom">
   </div>
-  <div class="layout__col2 container border-bottom border-right">
+  <div class="layout__col2 container border-bottom border-right hidden-xs-border-right">
     <div class="row">
       <div class="col-sm-8">
         <div class="company__slider js-company-slider">
@@ -46,11 +46,11 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4 hidden-xs-down">
         <div class="anim_01" id="anim01"></div>
       </div>
     </div>
-    <div class="row">
+    <div class="row hidden-xs-down">
       <div class="col-sm-12">
         <div class="border-left border-top background-dotted-red pt-4"></div>
       </div>

@@ -1,0 +1,45 @@
+.history {
+
+  .history__path-year {
+    position: relative;
+    &:after {
+      content: attr(data-year);
+      position: absolute;
+      display: block;
+    }
+  }
+
+  .history__line {
+    svg {
+      width: 100%;
+    }
+  }
+
+  .history__label {
+    position: relative;
+    &:after {
+      position:absolute;
+      width:rem-calc(47px);
+      height: 100%;
+      display: block;
+      content: ' ';
+      left:0;
+      border: 1px solid #869D96;
+      border-right:0;
+      top: 0;
+    }
+    &:before {
+      position:absolute;
+      width:rem-calc(47px);
+      height: 100%;
+      display: block;
+      content: ' ';
+      right:0;
+      border: 1px solid #869D96;
+      border-left:0;
+      top: 0;
+    }
+    padding: rem-calc(22px) rem-calc(35px);
+    display: inline-block;
+  }
+}

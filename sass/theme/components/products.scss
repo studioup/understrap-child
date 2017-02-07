@@ -23,10 +23,13 @@
             display: inline-flex;
             width: 100%;
             align-items: flex-end;
-            font-size: rem-calc(25px);
+            font-size: rem-calc(20px);
             font-weight: 300;
             color: black;
             border-top: rem-calc(1px) solid #869D96;
+            @include media-breakpoint-up(lg) {
+              font-size: rem-calc(25px);
+            }
         }
     }
 

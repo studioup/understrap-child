@@ -15,7 +15,8 @@
     </a>
     <div class="dropdown-menu dropdown-menu-right" role="menu">
       <div class="nav__search">
-        <input type="text" placeholder="Search in 'Products'" name="search" class="form-control nav__search-input"/>
+        <?php get_search_form(); ?>
+        
       </div>
     </div>
   </li>

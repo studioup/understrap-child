@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="700px" height="281px" viewBox="0 0 700 281" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="694.669798 155.40399 694.669798 176.670405 673.404596 176.670405"></polygon>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="21.2652023" height="21.2664145" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ABXXXX_mockup_COMPANY" transform="translate(-228.000000, -1944.000000)">
+            <g id="Group" transform="translate(229.000000, 1944.000000)">
+                <g id="Group-5" transform="translate(342.500000, 140.000000) scale(-1, -1) rotate(-90.000000) translate(-342.500000, -140.000000) translate(202.500000, -202.500000)">
+                    <path d="M279.442016,684.576596 C251.595481,652.375113 210.441341,632 164.528338,632 C118.826652,632 77.8401233,652.18799 50,684.132722" id="Oval-2-Copy" stroke="#869D96" stroke-width="2" stroke-linecap="round" stroke-dasharray="1,4" transform="translate(164.721008, 658.288298) scale(1, -1) translate(-164.721008, -658.288298) "></path>
+                    <g id="Group-6" transform="translate(139.500000, 68.000000) scale(1, -1) rotate(-180.000000) translate(-139.500000, -68.000000) ">
+                        <path d="M229.442016,52.5765965 C201.595481,20.3751132 160.441341,2.13162821e-14 114.528338,2.13162821e-14 C68.8266517,2.13162821e-14 27.8401233,20.1879899 0,52.1327222" id="Oval-2" stroke="#869D96" stroke-width="0.5"></path>
+                        <polyline id="Path-5" stroke="#869D96" stroke-width="0.5" points="229.638152 52.5662494 229.638152 91.5526809 272.64575 130.184791"></polyline>
+                        <circle id="Oval-9" fill="#869D96" cx="270.69708" cy="127.762774" r="7.5"></circle>
+                    </g>
+                </g>
+                <use id="Rectangle-5-Copy-4" stroke="#869D96" mask="url(#mask-2)" stroke-width="2" fill="#FFFFFF" transform="translate(684.037197, 166.037197) rotate(-135.000000) translate(-684.037197, -166.037197) " xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

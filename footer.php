@@ -17,9 +17,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="layout">
 		  <div class="layout__col1 border-top">
 		  </div>
-		  <div class="layout__col2 container border-top border-right">
+		  <div class="layout__col2 container border-top border-right hidden-xs-border-right">
 				<div class="row no-gutters">
-					<div class="col-sm-2 offset-sm-1 pt-5">
+					<div class="col-lg-2 offset-lg-1 col-sm-3 pt-5">
 						<h4>Products</h4>
 						<ul class="footer-list mt-3">
 							<li><a href="#">Lorem Ipsum</a></li>
@@ -29,7 +29,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<li><a href="#">Lorem Ipsum</a></li>
 						</ul>
 					</div>
-					<div class="col-sm-2 pt-5">
+					<div class="col-lg-2 col-sm-3 pt-5">
 						<h4>Company</h4>
 						<ul class="footer-list mt-3">
 							<li><a href="#">Lorem Ipsum</a></li>
@@ -37,7 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<li><a href="#">Lorem Ipsum</a></li>
 						</ul>
 					</div>
-					<div class="col-sm-4 offset-sm-2 background-dotted-red border-left">
+					<div class="col-lg-4 offset-lg-2 col-sm-5 background-dotted-red border-left hidden-xs-border-left">
 						<div class="pl-5 pr-5 pt-5 pb-5">
 							<h4>Info & Support</h4>
 							<a href="#" class="mt-2 btn btn-secondary">Contact Now</a>
@@ -45,7 +45,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<a href="#" class="mt-2 btn btn-secondary">Contact Now</a>
 						</div>
 					</div>
-					<div class="col-sm-1 border-left">
+					<div class="col-sm-1 border-left hidden-xs-down">
 						<div class="pt-5"></div>
 					</div>
 				</div>
@@ -56,9 +56,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="layout">
 			<div class="layout__col1">
 			</div>
-			<div class="layout__col2 container border-right">
+			<div class="layout__col2 container border-right hidden-xs-border-right">
 				<div class="row no-gutters">
-					<div class="col-sm-6 offset-sm-1 pt-3 pr-6">
+					<div class="col-lg-6 offset-lg-1 col-sm-6 pt-3 pr-6">
 						<ul class="footer-list footer-list--inline">
 							<li>Ablerex Corporation</li>
 							<li><a href="#">Private</a></li>
@@ -66,11 +66,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<li><a href="#">by Studio Up</a></li>
 						</ul>
 					</div>
-					<div class="col-sm-4 background-dotted-red border-left">
+					<div class="col-lg-4 col-sm-5 background-dotted-red border-left hidden-xs-down">
 						<div class="pt-2">
 						</div>
 					</div>
-					<div class="col-sm-1 border-left">
+					<div class="col-sm-1 border-left hidden-xs-down">
 						<div class="pt-2"></div>
 					</div>
 				</div>

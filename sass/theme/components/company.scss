@@ -8,13 +8,9 @@
 
   .slick-dots {
     bottom: 0;
-    width: rem-calc(30px);
+    @include media-breakpoint-up(sm) {
+      bottom: 0;
+      width: rem-calc(30px);
+    }
   }
-}
-
-.anim_01 {
-    display: inline-flex;
-    align-items: center;
-    height: 100%;
-    svg {position: relative;right: rem-calc(-60px);}
 }

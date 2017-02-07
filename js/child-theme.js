@@ -21001,7 +21001,14 @@ THEME.homepage = {
         jQuery('.js-company-slider').slick({
           vertical: true,
           arrows: false,
-          dots: true
+          dots: true,
+          responsive: [
+            {
+              breakpoint: 575,
+              settings: {
+                vertical: false,
+              }
+            }]
         });
       }
     },
@@ -21072,7 +21079,7 @@ THEME.homepage = {
           var anim;
           anim = bodymovin.loadAnimation(params);
           jQuery(window).on("scroll",function(){
-            
+
               if (jQuery(this).scrollTop()>topPosition){
                 anim.play();
               }
@@ -21123,4 +21130,34 @@ THEME.homepage = {
         });
       }
     }
+};
+
+THEME.company = {
+  init: function(){
+      var a = this;
+      this.initLocationSlider();
+  },
+  initLocationSlider: function(){
+    if (jQuery('.js-location-slider').length){
+      jQuery('.js-location-slider').slick({
+        arrows: false,
+        dots: false
+      });
+    }
+  }
+};
+
+THEME.careers = {
+  init: function(){
+      var a = this;
+      this.manageSelectPositions();
+  },
+  manageSelectPositions: function(){
+    if (jQuery('.js-position').length){
+      jQuery.each(jQuery('.js-position'),function(){
+        jQuery("#field_a4bv0").append("<option value='"+jQuery(this).text()+"'>"+jQuery(this).text()+"</option>");
+
+      });
+    }
+  }
 };

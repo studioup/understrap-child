@@ -1,0 +1,184 @@
+<?php
+/**
+ * Template Name: Careers
+ *
+ * Template for displaying a page without sidebar even if a sidebar widget is published.
+ *
+ * @package understrap
+ */
+
+get_header();
+$container = get_theme_mod( 'understrap_container_type' );
+?>
+<div class="js-page" data-jsid="careers">
+  <div class="main-section ">
+    <div class="layout">
+      <div class="layout__col1 ">
+      </div>
+      <div class="layout__col2 container ">
+        <div class="row no-gutters">
+          <div class="col-sm-9 border-right">
+            <h1 class="gradient-red mt-7 mb-3 col-sm-10">— <?php the_field('main_title') ?></h1>
+            <h3 class="pl-6  col-sm-10"><?php the_field('subtitle') ?></h3>
+            <div class="pl-6 mt-4 mb-7">
+              <div class="contact-list">
+                <?php
+
+                // check if the repeater field has rows of data
+                if( have_rows('contacts') ):
+
+                 	// loop through the rows of data
+                    while ( have_rows('contacts') ) : the_row();
+
+                        switch(get_sub_field('type')){
+                          case 'email':
+                            $link="mailto:".get_sub_field('value');
+                          break;
+                          case 'phone':
+                            $link="tel://".get_sub_field('value');
+                          break;
+                          case 'skype':
+                            $link="skype:".get_sub_field('value');
+                          break;
+                        }
+
+                        ?>
+                        <div class="row">
+                          <div class="col-sm-3"><strong><?php the_sub_field('label'); ?></strong></div>
+                          <div class="col-sm-5"><a href="<?php echo $link ?>"><?php the_sub_field('value'); ?></a></div>
+                        </div>
+                        <?php
+
+
+                    endwhile;
+
+                else :
+
+                    // no rows found
+
+                endif;
+
+                ?>
+              </div>
+              <div class="careers-list">
+                <?php
+
+                // check if the repeater field has rows of data
+                if( have_rows('open_positions') ):
+
+
+                        ?>
+                        <div class="row">
+                          <div class="col-sm-3"><strong>Open Positions</strong></div>
+                          <div class="col-sm-7">
+                            <div id="accordion" class="" role="tablist" aria-multiselectable="true">
+                              <?php
+                              // loop through the rows of data
+                                $c=0;
+                               while ( have_rows('open_positions') ) : the_row();
+                               ?>
+                               <div class="card careers-list__item">
+                                <div class="card-header careers-list__header" role="tab" id="headingOne">
+                                  <h5 class="mb-0">
+                                    <a data-toggle="collapse" class="js-position" data-parent="#accordion" href="#collapse<?php echo $c ?>" aria-expanded="true" aria-controls="collapse<?php echo $c ?>">
+                                      <?php the_sub_field('position_name'); ?>
+                                    </a>
+                                  </h5>
+                                </div>
+
+                                <div id="collapse<?php echo $c ?>" class="collapse " role="tabpanel" aria-labelledby="heading<?php echo $c ?>">
+                                  <div class="card-block careers-list__block">
+                                    <?php the_sub_field('position_description'); ?>
+                                  </div>
+                                </div>
+                              </div>
+                             <?php
+                             $c++;
+                            endwhile; ?>
+                            </div>
+                          </div>
+                        </div>
+                        <?php
+
+                else :
+
+                    // no rows found
+
+                endif;
+
+                ?>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2 border-right">
+
+          </div>
+        </div>
+      </div>
+      <div class="layout__col3 ">
+      </div>
+    </div>
+  </div>
+  <div class="main-section">
+    <div class="layout">
+      <div class="layout__col1 ">
+      </div>
+      <div class="layout__col2 container ">
+        <div class="row no-gutters">
+          <div class="col-sm-9 border-right">
+            <div class="pl-6 mt-6 mb-6">
+              <h3 class="pl-6 ">—— <?php the_field('form_section_title') ?></h3>
+              <h2 class="gradient-blue col-sm-9"><?php the_field('form_title') ?></h2>
+              </div>
+          </div>
+          <div class="col-sm-2 border-right">
+
+          </div>
+        </div>
+      </div>
+      <div class="layout__col3 ">
+      </div>
+    </div>
+    <div class="layout">
+      <div class="layout__col1 ">
+      </div>
+      <div class="layout__col2 container ">
+        <div class="row no-gutters">
+          <div class="col-sm-9 border-right">
+            <div class="pl-6">
+              <div class="contacts__form ">
+                <?php the_field('form_content') ?>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2 border-right border-top background-dotted-red">
+
+          </div>
+        </div>
+      </div>
+      <div class="layout__col3 ">
+      </div>
+    </div>
+    <div class="layout">
+      <div class="layout__col1 ">
+      </div>
+      <div class="layout__col2 container ">
+        <div class="row no-gutters">
+          <div class="col-sm-9 border-right">
+            <div class="pt-6"></div>
+          </div>
+          <div class="col-sm-2 border-top ">
+          </div>
+        </div>
+      </div>
+      <div class="layout__col3  ">
+      </div>
+    </div>
+
+
+
+    </div>
+  </div>
+
+</div>
+<?php get_footer(); ?>

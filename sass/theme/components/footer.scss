@@ -1,4 +1,7 @@
 footer {
+  @include media-breakpoint-down(xs) {
+    text-align: center;
+  }
   h4 {
     color: $red;
     font-weight: bold;
@@ -16,7 +19,7 @@ footer {
       display: flex;
       justify-content: space-between;
       li {
-        
+
 
       }
     }

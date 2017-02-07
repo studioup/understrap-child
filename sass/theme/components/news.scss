@@ -1,5 +1,5 @@
 .news-list {
-  .news {
+  .news-list__item {
     a {
       color: black;
       &:hover {
@@ -9,7 +9,48 @@
   }
 }
 
-
+.news {
+  font-size: rem-calc(25px);
+  h2, h3, h4, h5, h6 {
+    margin-bottom: rem-calc(30px);
+  }
+  h4 {
+    font-size: rem-calc(30px);
+  }
+  h5 {
+    font-size: rem-calc(28px);
+  }
+  h6 {
+    font-size: rem-calc(25px);
+  }
+  a {
+    color: black;
+  }
+  ul, ol {
+    font-weight: 300;
+    margin-bottom: rem-calc(30px);
+  }
+  .news__category {
+    font-weight: bold;
+    font-size: rem-calc(18px);
+  }
+  .news__date {
+    font-size: rem-calc(14px);
+  }
+  .news__text {
+    p {
+      font-size: rem-calc(24px);
+      font-weight: 300;
+      margin-bottom:rem-calc(30px);
+      &:after {
+        content: ' ';
+        display: block;
+        position: relative;
+        clear: both;
+      }
+    }
+  }
+}
 
 .go-top {
     display: block;

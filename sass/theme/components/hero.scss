@@ -18,8 +18,11 @@ $lowHeight: rem-calc(74px);
     }
   }
   .hero__main-content {
-    min-height: $mainHeight;
+    min-height: $mainHeight*0.8;
     display: flex;
+    @include media-breakpoint-up(lg) {
+      min-height: $mainHeight;
+    }
   }
   .hero__scrolldown {
     text-align: center;
@@ -34,7 +37,10 @@ $lowHeight: rem-calc(74px);
       text-align: left;
       color: white;
       align-self: center;
-      padding: 0 rem-calc(90px);
+      padding: 0 rem-calc(50px);
+      @include media-breakpoint-up(sm) {
+        padding: 0 rem-calc(90px);
+      }
       h1 {
         margin-bottom: rem-calc(20px);
         max-width: rem-calc(450px);

@@ -23,7 +23,7 @@ $container = get_theme_mod( 'understrap_container_type' );
               $parentTerm = get_term( $currentTerm->parent, $currentTaxonomy );
               ?>
               <li class="breadcrumb-item"><a href="<?php echo get_term_link( $parentTerm ); ?>"><?php echo $parentTerm->name ?></a></li>
-            <? } ?>
+            <?php } ?>
           <li class="breadcrumb-item"><?php echo single_term_title(); ?></li>
         </ol>
 

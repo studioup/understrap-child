@@ -1,0 +1,26 @@
+.pagination {
+  margin-bottom: -1px;
+  a {
+    color: black;
+  }
+  .page-item {
+
+    .page-link {
+      @extend .background-dotted-red;
+      height: rem-calc(40px);
+      line-height: rem-calc(40px);
+      padding: 0 rem-calc(14px);
+      border: rem-calc(1px) solid $aqua;
+      color: black;
+    }
+    &.active .page-link {
+      background: white;
+    }
+  }
+
+  .page-item.active .page-link {
+
+    color: black;
+
+  }
+}

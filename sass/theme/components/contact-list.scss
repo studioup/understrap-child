@@ -6,10 +6,12 @@
     text-decoration: none;
     display: block;
     &:after {
-      content: '>';
+      content: "\f105";
+      font-family: "fontawesome";
       transition: 0.3s ease all;
       color: $red;
-      float: right
+      float: right;
+      margin-top: rem-calc(-2px);
     }
     &:hover:after {
       margin-right: rem-calc(10px);

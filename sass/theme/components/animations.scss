@@ -19,8 +19,11 @@
 }
 
 .anim_01 {
-    display: inline-flex;    
+    display: inline-flex;
     align-items: center;
     height: 100%;
-    svg {position: relative;right: rem-calc(-60px);}
+    svg {
+      position: relative;
+      right: rem-calc(-60px);
+    }
 }
