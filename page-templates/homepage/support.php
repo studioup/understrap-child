@@ -17,10 +17,9 @@
                 <img src="<?php echo get_stylesheet_directory_uri() . '/img/grid.svg'; ?>" />
               </div>
               <div class="support__anim anim_02 hidden-xs-down" id="anim02"></div>
-              <h2 class="h1 text-primary pl-0 col-sm-11">We’re never on
-      energy-saving mode</h2>
-              <h3 class="mt-3">We provide certified Ablerex<br>assistance all around Europe.</h3>
-              <a href="#" class="btn btn-secondary mt-3">Get in touch</a>
+              <h2 class="h1 text-primary pl-0 col-sm-11"><?php the_field('support_main_title') ?></h2>
+              <h3 class="mt-3"><?php the_field('support_content') ?></h3>
+              <a href="<?php the_field('support_link') ?>" class="btn btn-secondary mt-3">Get in touch</a>
             </div>
           </div>
         </div>
@@ -57,7 +56,7 @@
           <div class="support2__anim anim_03" id="anim03"></div>
           <div class="row">
             <div class="col-sm-6 col-8 offset-2 offset-sm-3">
-              <p class="font-big pt-7 pb-7 paragraph">Ut enim ad minim veniam, quis nostrud <span>exercitation</span> ullamco nisi ut. Enim ipsum dolor sit amet, adipiscing elit, sed do <span>eiusmod tempor</span> incididunt ut labore et magna aliqua.</p>
+              <div class="font-big pt-7 pb-7 paragraph"><?php the_field('support_content_alt') ?></div>
             </div>
           </div>
         </div>

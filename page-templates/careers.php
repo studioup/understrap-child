@@ -17,10 +17,10 @@ $container = get_theme_mod( 'understrap_container_type' );
       </div>
       <div class="layout__col2 container ">
         <div class="row no-gutters">
-          <div class="col-sm-9 border-right">
-            <h1 class="gradient-red mt-7 mb-3 col-sm-10">— <?php the_field('main_title') ?></h1>
-            <h3 class="pl-6  col-sm-10"><?php the_field('subtitle') ?></h3>
-            <div class="pl-6 mt-4 mb-7">
+          <div class="col-sm-9 border-right hidden-xs-border-right">
+            <h1 class="gradient-red mt-7 mb-3 pl-0 col-sm-10">— <?php the_field('main_title') ?></h1>
+            <h3 class="pl-6 col-sm-10"><?php the_field('subtitle') ?></h3>
+            <div class="pl-sm-6 mt-4 mb-7">
               <div class="contact-list">
                 <?php
 
@@ -44,8 +44,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                         ?>
                         <div class="row">
-                          <div class="col-sm-3"><strong><?php the_sub_field('label'); ?></strong></div>
-                          <div class="col-sm-5"><a href="<?php echo $link ?>"><?php the_sub_field('value'); ?></a></div>
+                          <div class="col-lg-3 col-md-3 col-sm-10"><strong><?php the_sub_field('label'); ?></strong></div>
+                          <div class="col-lg-5 col-md-7 col-sm-10"><a href="<?php echo $link ?>"><?php the_sub_field('value'); ?></a></div>
                         </div>
                         <?php
 
@@ -69,8 +69,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                         ?>
                         <div class="row">
-                          <div class="col-sm-3"><strong>Open Positions</strong></div>
-                          <div class="col-sm-7">
+                          <div class="col-md-3 col-sm-10"><strong>Open Positions</strong></div>
+                          <div class="col-md-7 col-sm-10">
                             <div id="accordion" class="" role="tablist" aria-multiselectable="true">
                               <?php
                               // loop through the rows of data
@@ -110,7 +110,7 @@ $container = get_theme_mod( 'understrap_container_type' );
               </div>
             </div>
           </div>
-          <div class="col-sm-2 border-right">
+          <div class="col-md-2 col-sm-3 border-right">
 
           </div>
         </div>
@@ -125,13 +125,13 @@ $container = get_theme_mod( 'understrap_container_type' );
       </div>
       <div class="layout__col2 container ">
         <div class="row no-gutters">
-          <div class="col-sm-9 border-right">
-            <div class="pl-6 mt-6 mb-6">
+          <div class="col-sm-9 border-right hidden-xs-border-right">
+            <div class="pl-sm-6 mt-md-6 mt-3 mb-6">
               <h3 class="pl-6 ">—— <?php the_field('form_section_title') ?></h3>
-              <h2 class="gradient-blue col-sm-9"><?php the_field('form_title') ?></h2>
-              </div>
+              <h2 class="gradient-blue pl-0 col-sm-9"><?php the_field('form_title') ?></h2>
+            </div>
           </div>
-          <div class="col-sm-2 border-right">
+          <div class="col-md-2 col-sm-3 border-right hidden-xs-border-right">
 
           </div>
         </div>
@@ -144,14 +144,14 @@ $container = get_theme_mod( 'understrap_container_type' );
       </div>
       <div class="layout__col2 container ">
         <div class="row no-gutters">
-          <div class="col-sm-9 border-right">
-            <div class="pl-6">
+          <div class="col-sm-12 border-right hidden-xs-border-right">
+            <div class="pl-md-6">
               <div class="contacts__form ">
                 <?php the_field('form_content') ?>
               </div>
             </div>
           </div>
-          <div class="col-sm-2 border-right border-top background-dotted-red">
+          <div class="col-sm-2 hidden-sm-down border-right border-top background-dotted-red">
 
           </div>
         </div>
@@ -164,10 +164,10 @@ $container = get_theme_mod( 'understrap_container_type' );
       </div>
       <div class="layout__col2 container ">
         <div class="row no-gutters">
-          <div class="col-sm-9 border-right">
+          <div class="col-sm-9 border-right hidden-xs-border-right">
             <div class="pt-6"></div>
           </div>
-          <div class="col-sm-2 border-top ">
+          <div class="col-sm-2 border-top hidden-xs-border-top">
           </div>
         </div>
       </div>

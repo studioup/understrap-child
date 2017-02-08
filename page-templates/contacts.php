@@ -17,10 +17,10 @@ $container = get_theme_mod( 'understrap_container_type' );
       </div>
       <div class="layout__col2 container ">
         <div class="row no-gutters">
-          <div class="col-sm-9 border-right">
-            <h1 class="gradient-red mt-7 mb-3 col-sm-9">— <?php the_field('main_title') ?></h1>
-            <h3 class="pl-6  col-sm-10"><?php the_field('subtitle') ?></h3>
-            <div class="pl-6 mt-4 mb-7">
+          <div class="col-sm-9 border-right hidden-xs-border-right">
+            <h1 class="gradient-red mt-7 mb-3 pl-0 col-lg-9 col-md-10">— <?php the_field('main_title') ?></h1>
+            <h3 class="pl-lg-6 pl-0 col-sm-10"><?php the_field('subtitle') ?></h3>
+            <div class="pl-lg-6 mt-4 mb-7">
               <div class="contact-list">
                 <?php
 
@@ -44,8 +44,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                         ?>
                         <div class="row">
-                          <div class="col-sm-2"><strong><?php the_sub_field('label'); ?></strong></div>
-                          <div class="col-sm-5"><a href="<?php echo $link ?>"><?php the_sub_field('value'); ?></a></div>
+                          <div class="col-lg-2 col-sm-8"><strong><?php the_sub_field('label'); ?></strong></div>
+                          <div class="col-lg-5 col-sm-8"><a href="<?php echo $link ?>"><?php the_sub_field('value'); ?></a></div>
                         </div>
                         <?php
 
@@ -62,9 +62,9 @@ $container = get_theme_mod( 'understrap_container_type' );
               </div>
             </div>
           </div>
-          <div class="col-sm-3">
+          <div class="col-sm-3 hidden-xs-down">
             <div class="support_anim01">
-              <img src="<?php echo get_stylesheet_directory_uri() . '/img/support01.svg'; ?>" />
+              <div class="ct_anim_01" id="anim01"></div>
             </div>
           </div>
         </div>
@@ -74,15 +74,15 @@ $container = get_theme_mod( 'understrap_container_type' );
     </div>
   </div>
   <div class="main-section">
-    <div class="layout">
+    <div class="layout ">
       <div class="layout__col1 ">
       </div>
       <div class="layout__col2 container ">
         <div class="row no-gutters">
-          <div class="col-sm-9 border-right">
-            <div class="pl-6 mt-6 mb-6">
+          <div class="col-sm-9 border-right hidden-xs-border-right">
+            <div class="pl-md-6 pl-0 mt-3 mt-md-6 mb-6">
               <h3 class="pl-6 ">—— <?php the_field('form_section_title') ?></h3>
-              <h2 class="gradient-blue col-sm-9"><?php the_field('form_title') ?></h2>
+              <h2 class="gradient-blue col-sm-9 pl-0"><?php the_field('form_title') ?></h2>
               </div>
           </div>
           <div class="col-sm-3">
@@ -98,14 +98,14 @@ $container = get_theme_mod( 'understrap_container_type' );
       </div>
       <div class="layout__col2 container ">
         <div class="row no-gutters">
-          <div class="col-sm-9 border-right">
-            <div class="pl-6">
+          <div class="col-md-9 border-right hidden-xs-border-right">
+            <div class="pl-md-6">
               <div class="contacts__form ">
                 <?php the_field('form_content') ?>
               </div>
             </div>
           </div>
-          <div class="col-sm-3 border-top background-dotted-red">
+          <div class="col-md-3 hidden-md-down border-top background-dotted-red">
 
           </div>
         </div>
@@ -113,7 +113,7 @@ $container = get_theme_mod( 'understrap_container_type' );
       <div class="layout__col3 border-top background-dotted-red">
       </div>
     </div>
-    <div class="layout">
+    <div class="layout hidden-xs-down">
       <div class="layout__col1 ">
       </div>
       <div class="layout__col2 container ">
@@ -128,7 +128,7 @@ $container = get_theme_mod( 'understrap_container_type' );
       <div class="layout__col3 border-top ">
       </div>
     </div>
-    <div class="layout">
+    <div class="layout hidden-xs-down">
       <div class="layout__col1 border-top">
       </div>
       <div class="layout__col2 container ">
@@ -150,9 +150,9 @@ $container = get_theme_mod( 'understrap_container_type' );
       </div>
       <div class="layout__col2 container ">
         <div class="row no-gutters">
-          <div class="col-sm-11 border-right pt-6 pb-6">
+          <div class="col-sm-11 border-right hidden-xs-border-right pt-6 pb-6">
             <div class="row">
-              <div class="col-sm-7 offset-sm-1">
+              <div class="col-md-7 offset-md-1 col-sm-8">
                 <h3 class="pl-6">—— <?php the_field('sub_section_title') ?></h3>
                 <h2 class="gradient-blue mt-4 mb-4 "><?php the_field('sub_title') ?></h2>
                 <div class="pl-6 font-big"><?php the_field('sub_content') ?></div>
@@ -160,9 +160,9 @@ $container = get_theme_mod( 'understrap_container_type' );
                   <a href="<?php the_field('sub_link') ?>" class="btn btn-secondary"><?php the_field('sub_link_label') ?></a>
                 </div>
               </div>
-              <div class="col-sm-4">
+              <div class="col-sm-4 hidden-xs-down">
                 <div class="support_anim02">
-                  <img src="<?php echo get_stylesheet_directory_uri() . '/img/support02.svg'; ?>" />
+                  <div class="ct_anim_02" id="anim02"></div>
                 </div>
               </div>
             </div>

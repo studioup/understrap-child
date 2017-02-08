@@ -314,7 +314,7 @@ $container = get_theme_mod( 'understrap_container_type' );
             <div class="col-md-10 mt-3 mb-3 col-lg-8">
               <div class="responsibility mt-3 mb-3">
                 <div class="responsibility__image">
-                  <img src="<?php echo get_stylesheet_directory_uri() . '/img/responsibility.svg'; ?>" />
+                  <div class="cp_anim_01" id="anim01"></div>
                 </div>
                 <div class="row">
                   <div class="col-8 offset-2">

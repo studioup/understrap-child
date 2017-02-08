@@ -9,41 +9,37 @@
           <h2 class="gradient-blue ">Latest from us</h2>
           <div class="news-list mb-4 mt-4 pl-6">
             <div class="row">
-              <div class="col-sm-6">
-                <div class="news-list__item">
-                  <a href="#">
-                    <h5>Cebit 2017 20-24 March www.cebit.de</h5>
-                    <p>2016/08/03 Show Date 2017 20-24 March Show Venue N/A Location/Booth No. N/A Opening Hours N/A</p>
-                  </a>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="news-list__item">
-                  <a href="#">
-                    <h5>Cebit 2017 20-24 March www.cebit.de</h5>
-                    <p>2016/08/03 Show Date 2017 20-24 March Show Venue N/A Location/Booth No. N/A Opening Hours N/A</p>
-                  </a>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="news-list__item">
-                  <a href="#">
-                    <h5>Cebit 2017 20-24 March www.cebit.de</h5>
-                    <p>2016/08/03 Show Date 2017 20-24 March Show Venue N/A Location/Booth No. N/A Opening Hours N/A</p>
-                  </a>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="news-list__item">
-                  <a href="#">
-                    <h5>Cebit 2017 20-24 March www.cebit.de</h5>
-                    <p>2016/08/03 Show Date 2017 20-24 March Show Venue N/A Location/Booth No. N/A Opening Hours N/A</p>
-                  </a>
-                </div>
-              </div>
+              <?php
+               $args = array(
+                'posts_per_page' => 4,
+                'orderby' => 'most_recent'
+                );
+
+               $the_query = new WP_Query( $args );
+               ?>
+
+               <?php if ( have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+                 <div class="col-sm-6">
+                   <div class="news-list__item">
+                     <a href="<?php the_permalink();?>">
+                       <h5><?php the_title(); ?></h5>
+                       <p><?php the_excerpt(); ?></p>
+                     </a>
+                   </div>
+                 </div>
+
+              <?php endwhile; else: ?>
+
+              <?php endif; ?>
+
+
+
+              <?php wp_reset_postdata(); ?>
+
             </div>
           </div>
-          <a href="#" class="btn btn-secondary">See more</a>
+          <a href="<?php echo get_permalink( get_page_by_path( 'news' ) ); ?>" class="btn btn-secondary">See more</a>
         </div>
       </div>
       <div class="col-md-1 col-lg-2 hidden-xs-down">

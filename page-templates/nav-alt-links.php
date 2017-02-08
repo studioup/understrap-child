@@ -1,6 +1,6 @@
 <ul class="navbar-alt navbar-nav">
   <li class="menu-item dropdown">
-    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown-hover" aria-haspopup="true" aria-expanded="false">
       <img src="<?php echo get_stylesheet_directory_uri() . '/img/icon-world.svg'; ?>" />
     </a>
     <ul class="dropdown-menu dropdown-menu-right" role="menu">
@@ -16,12 +16,12 @@
     <div class="dropdown-menu dropdown-menu-right" role="menu">
       <div class="nav__search">
         <?php get_search_form(); ?>
-        
+
       </div>
     </div>
   </li>
   <li class="menu-item dropdown">
-    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown-hover" aria-haspopup="true" aria-expanded="false">
       <img src="<?php echo get_stylesheet_directory_uri() . '/img/icon-lock.svg'; ?>" />
     </a>
     <div class="dropdown-menu dropdown-menu-right" role="menu">

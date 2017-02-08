@@ -14,9 +14,9 @@ $container = get_theme_mod( 'understrap_container_type' );
     </div>
     <div class="layout__col2 container ">
     <div class="row no-gutters">
-      <div class="col-sm-11 border-right">
+      <div class="col-sm-12 col-lg-11 border-right hidden-xs-border-right">
 
-        <ol class="breadcrumb pl-6 mt-5">
+        <ol class="breadcrumb pl-sm-6 mt-sm-5 mt-3">
           <li class="breadcrumb-item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
           <li class="breadcrumb-item"><a href="<?php echo get_post_type_archive_link( 'product' ); ?>">Products</a></li>
             <?php if ($currentTerm->parent!=0) {
@@ -27,7 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
           <li class="breadcrumb-item"><?php echo single_term_title(); ?></li>
         </ol>
 
-        <h1 class="h2 mt-4 gradient-blue"><?php echo single_term_title(); ?></h1>
+        <h1 class="h2 mt-sm-4 mt-2 gradient-blue"><?php echo single_term_title(); ?></h1>
       </div>
     </div>
     </div>
@@ -45,8 +45,8 @@ foreach ($terms as &$term) {
     </div>
     <div class="layout__col2 container">
     <div class="row no-gutters">
-      <div class="col-sm-11 border-right">
-        <h3 class="pl-6 mt-5 mb-5" ><a href="<?php echo get_term_link( $term ); ?>">——— <?php echo $term->name ?></a></h3>
+      <div class="col-sm-12 col-lg-11 border-right hidden-xs-border-right">
+        <h3 class="pl-6 mt-sm-5 mt-3 mb-3 mb-sm-3" ><a href="<?php echo get_term_link( $term ); ?>">——— <?php echo $term->name ?></a></h3>
       </div>
     </div>
     </div>
@@ -58,9 +58,9 @@ foreach ($terms as &$term) {
     </div>
     <div class="layout__col2 container">
     <div class="row  no-gutters">
-      <div class="col-sm-11 border-right">
+      <div class="col-sm-12 col-lg-11 border-right hidden-xs-border-right">
         <div class="row">
-          <div class="col-sm-10">
+          <div class="col-sm-11 col-lg-10">
             <div class="row">
             <?php
 
@@ -79,7 +79,7 @@ foreach ($terms as &$term) {
              while ( $query->have_posts() ) : $query->the_post(); ?>
 
 
-             <div class="col-sm-4">
+             <div class="col-md-4 col-sm-6">
               <?php
 
               /*
@@ -114,16 +114,16 @@ foreach ($terms as &$term) {
   </div>
   <div class="layout__col2 container">
   <div class="row  no-gutters">
-    <div class="col-sm-11 border-right">
+    <div class="col-sm-11 border-right hidden-xs-border-right">
       <div class="row">
-        <div class="col-sm-10">
+        <div class="col-sm-11 col-lg-10">
           <div class="row">
           <?php
 
            while ( have_posts() ) : the_post(); ?>
 
 
-           <div class="col-sm-4">
+           <div class="col-md-4 col-sm-6">
             <?php
 
             /*
@@ -155,11 +155,11 @@ foreach ($terms as &$term) {
 
 ?>
 <div class="layout">
-  <div class="layout__col1 border-top">
+  <div class="layout__col1 border-top hidden-xs-border-top">
   </div>
-  <div class="layout__col2 container border-top border-right">
+  <div class="layout__col2 container border-top border-right hidden-xs-border-top hidden-xs-border-right">
     <div class="row no-gutters">
-      <div class="border-left col-sm-1 offset-sm-11">
+      <div class="border-left xs-border-top xs-border-right col-lg-1 offset-lg-11 col-sm-2 offset-sm-10">
         <div class="go-top">
           <a href="#">⇠ Back</a>
         </div>

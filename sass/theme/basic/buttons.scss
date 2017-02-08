@@ -12,7 +12,7 @@
   }
   &:hover{
     color: $aqua;
-    background: none;
+    background: white;
     &:after {
       bottom: rem-calc(5px);
     }

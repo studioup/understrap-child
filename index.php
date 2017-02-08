@@ -9,7 +9,7 @@ $container = get_theme_mod( 'understrap_container_type' );
       </div>
       <div class="layout__col2 container ">
         <div class="row no-gutters">
-          <div class="col-sm-10 border-right">
+          <div class="col-sm-10 border-right hidden-xs-border-right">
 
             <h1 class="gradient-red mt-5 mb-5">— Latest news<br>from Ablerex</h1>
 
@@ -24,7 +24,7 @@ $container = get_theme_mod( 'understrap_container_type' );
       </div>
     </div>
   </div>
-  <div class="main-section ">
+  <div class="main-section hidden-xs-down">
     <div class="layout">
       <div class="layout__col1 ">
       </div>
@@ -47,9 +47,9 @@ $container = get_theme_mod( 'understrap_container_type' );
     <div class="layout">
       <div class="layout__col1 ">
       </div>
-      <div class="layout__col2 border-left container ">
+      <div class="layout__col2 border-left hidden-xs-border-left container ">
         <div class="row">
-          <div class="col-sm-10 ">
+          <div class="col-md-10 col-sm-12 ">
             <div class="row pt-3">
           <?php if ( have_posts() ) : ?>
 

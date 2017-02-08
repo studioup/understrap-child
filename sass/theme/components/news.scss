@@ -1,5 +1,7 @@
 .news-list {
   .news-list__item {
+    z-index: 1;
+    position: relative;
     a {
       color: black;
       &:hover {
@@ -10,7 +12,9 @@
 }
 
 .news {
-  font-size: rem-calc(25px);
+  @include media-breakpoint-up(sm) {
+    font-size: rem-calc(25px);
+  }
   h2, h3, h4, h5, h6 {
     margin-bottom: rem-calc(30px);
   }
@@ -23,6 +27,7 @@
   h6 {
     font-size: rem-calc(25px);
   }
+
   a {
     color: black;
   }
@@ -39,7 +44,6 @@
   }
   .news__text {
     p {
-      font-size: rem-calc(24px);
       font-weight: 300;
       margin-bottom:rem-calc(30px);
       &:after {

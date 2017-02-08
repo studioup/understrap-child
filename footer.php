@@ -58,7 +58,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</div>
 			<div class="layout__col2 container border-right hidden-xs-border-right">
 				<div class="row no-gutters">
-					<div class="col-lg-6 offset-lg-1 col-sm-6 pt-3 pr-6">
+					<div class="col-lg-6 offset-lg-1 col-sm-6 pt-3 pr-0 pr-sm-3 pr-md-6">
 						<ul class="footer-list footer-list--inline">
 							<li>Ablerex Corporation</li>
 							<li><a href="#">Private</a></li>

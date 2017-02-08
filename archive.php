@@ -12,7 +12,7 @@ $container = get_theme_mod( 'understrap_container_type' );
           <div class="col-sm-10 border-right">
 
             <h1 class="gradient-red mt-5 mb-5">— <?php
-						the_archive_title();						
+						the_archive_title();
 						?></h1>
 
 

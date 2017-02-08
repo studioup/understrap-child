@@ -6,14 +6,18 @@ article {
     @extend .border-bottom;
     margin-top: -1px;
     margin-bottom: -1px;
+    @include media-breakpoint-down(xs) {
+      margin-bottom:rem-calc(30px);
+    }
+
     .category-loop__image {
       img {
-        width: 100%;
         max-width: 100%;
-        padding: rem-calc(20px);
       }
       a {
         display: block;
+        padding: rem-calc(20px);
+        text-align: center;
       }
     }
     .category-loop__name {
@@ -21,12 +25,18 @@ article {
       display: flex;
       align-items: center;
       justify-content: center;
+      @include media-breakpoint-down(lg) {
+        min-height: rem-calc(60px);
+      }
     }
     h5 {
       margin: 0;
       padding: 0;
       text-align: center;
       width: 100%;
+      @include media-breakpoint-down(lg) {
+        font-size: rem-calc(14px);
+      }
       a {
         display: block;
         padding: 0 rem-calc(18px);

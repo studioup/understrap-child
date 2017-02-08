@@ -1,20 +1,24 @@
 .support_anim01 {
   position: absolute;
-    margin-left: -116px;
+    margin-left: -131px;
     top: 50%;
     transform: translateY(-30%);
+    @include media-breakpoint-down(md) {
+      margin-left: rem-calc(-123px);
+    }
 }
 
 .support_anim02 {
   position: absolute;
-  right: -70px;
+  right: -80px;
+  top: -20px;
 }
 
 .anim_04 {
     position: absolute;
     width: rem-calc(336px);
     right: rem-calc(-51px);
-    top: 50%;
+    top: 48%;
     transform: translateY(-76%);
 }
 
@@ -26,4 +30,12 @@
       position: relative;
       right: rem-calc(-60px);
     }
+}
+
+.pa_anim_01 {
+  width: rem-calc(72px);
+  left: rem-calc(-36px);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }

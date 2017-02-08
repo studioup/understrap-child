@@ -34,6 +34,15 @@
     }
 
 }
+
+.product__content {
+  ul {
+    margin: 0;
+    padding: 0;
+    padding-left: rem-calc(20px);
+  }
+}
+
 .products-slider {
   .products-slider__image {
     padding-top: 90%;

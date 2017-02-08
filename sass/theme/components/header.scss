@@ -32,6 +32,9 @@
     }
   }
   .dropdown:hover {
+    .dropdown-menu {
+      display: block;
+    }
     & > .nav-link {
       color: $aqua;
       &:before {
@@ -105,6 +108,7 @@
    }
    .menu-item {
      border-bottom:rem-calc(1px) solid $aqua;
+
      &:last-child {
        border-bottom: 0;
      }

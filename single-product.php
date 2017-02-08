@@ -8,10 +8,10 @@ $terms = get_the_terms(get_the_ID(),"products-category");
   <div class="layout">
     <div class="layout__col1 border-bottom">
     </div>
-    <div class="layout__col2 container border-bottom">
+    <div class="layout__col2 container border-bottom hidden-sm-border-bottom">
       <div class="row no-gutters">
-        <div class="col-sm-12 border-right">
-          <ol class="breadcrumb pl-6 mt-5 mb-3">
+        <div class="col-sm-12 border-right hidden-xs-border-right">
+          <ol class="breadcrumb pl-md-6 mr-sm-3 mt-sm-5 mt-3">
             <li class="breadcrumb-item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
             <li class="breadcrumb-item"><a href="<?php echo get_post_type_archive_link( 'product' ); ?>">Products</a></li>
             <?php foreach ($terms as &$term) { ?>
@@ -23,10 +23,10 @@ $terms = get_the_terms(get_the_ID(),"products-category");
       </div>
       <?php while ( have_posts() ) : the_post(); ?>
 
-        <div class="row no-gutters border-right">
-          <div class="col-sm-7">
+        <div class="row no-gutters border-right hidden-xs-border-right">
+          <div class="col-sm-7 pr-4">
             <h1 class="h2 gradient-blue mb-4 mt-3"><?php the_title(); ?></h1>
-            <h5 class="pl-6 mb-4">
+            <h5 class="pl-md-6 mb-4">
               Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.
             </h5>
             <div class="product__content">
@@ -35,29 +35,29 @@ $terms = get_the_terms(get_the_ID(),"products-category");
             </div>
 
           </div>
-          <div class="col-sm-5 align-self-end">
+          <div class="col-sm-5 align-self-end xs-border-right xs-border-bottom mt-5 mt-sm-0">
             <div class="row no-gutters">
-              <div class="col-sm-12 border-left border-top border-bottom">
+              <div class="col-sm-12 border-left border-top border-bottom ">
                 <div class="product__image  background-dotted-red text-center p-4">
                   <?php the_post_thumbnail() ?>
                 </div>
               </div>
             </div>
             <div class="row no-gutters">
-              <div class="col-sm-6 border-left">
-                <div class="product__button text-center p-3">
+              <div class="col-md-6 border-left">
+                <div class="product__button text-center pt-3 pb-3">
                 <a href="#" class="btn btn-secondary">Specifications</a>
                 </div>
               </div>
-              <div class="col-sm-6 border-left">
-                <div class="product__button text-center p-3">
+              <div class="col-md-6 border-left sm-border-top">
+                <div class="product__button text-center pt-3 pb-3">
                 <a href="#" class="btn btn-secondary">Download</a>
               </div>
               </div>
             </div>
             <div class="row no-gutters">
               <div class="col-sm-12 border-left border-top">
-                <div class="product__button text-center p-3">
+                <div class="product__button text-center pt-3 pb-3">
                 <a href="#" class="btn btn-secondary">Power Calculator</a>
               </div>
               </div>
@@ -78,9 +78,9 @@ $terms = get_the_terms(get_the_ID(),"products-category");
   <div class="layout">
     <div class="layout__col1 ">
     </div>
-    <div class="layout__col2 container border-right">
+    <div class="layout__col2 container border-right hidden-xs-border-right">
       <div class="row no-gutters pt-7">
-        <div class="border-left border-top col-sm-1 offset-sm-11">
+        <div class="border-left border-top col-lg-1 xs-border-right offset-lg-11 col-md-2 offset-md-10">
           <div class="go-top">
             <a href="#">⇠ Back</a>
           </div>

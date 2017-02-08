@@ -1,6 +1,10 @@
 .breadcrumb {
   margin: 0;
   font-family: $alt-font;
+  padding: rem-calc(15px) 0px;
+  @include media-breakpoint-down(xs) {
+    font-size: rem-calc(12px);
+  }
   a {
     color: black;
   }

@@ -57,10 +57,18 @@
     display: flex;
     align-items: center;
     position: relative;
+    @include media-breakpoint-down(xs){
+      display: block;
+    }
     label {
         width: 30%;
         flex-shrink: 0;
         font-weight: bold;
+        @include media-breakpoint-down(xs){
+          padding: rem-calc(15px) 0;
+          margin-bottom: 0;
+          width: 100%;
+        }
     }
     input {
         width: 100% !important;
@@ -69,12 +77,18 @@
         padding: rem-calc(22px);
         outline-width: 0;
         border-bottom: 0;
+        @include media-breakpoint-down(xs){
+          border-bottom:1px solid $aqua;
+        }
     }
     textarea {
         border:1px solid $aqua;
         padding: rem-calc(22px);
         outline-width: 0;
         border-bottom: 0;
+        @include media-breakpoint-down(xs){
+          border-bottom:1px solid $aqua;
+        }
     }
     .frm_recaptcha {
         margin-left: 30%;
@@ -82,6 +96,15 @@
         width: 100%;
         margin-bottom: rem-calc(-1px);
         padding: 20px;
+        @include media-breakpoint-down(xs){
+          margin-left: 0%;
+          iframe {
+            transform: scale(0.82);
+            -webkit-transform: scale(0.82);
+            transform-origin: 0 0;
+            -webkit-transform-origin: 0 0;
+          }
+        }
     }
     .frm_error {
         position: absolute;
@@ -100,6 +123,9 @@
         max-width: none;
         padding: 0;
         min-height: auto;
+        @include media-breakpoint-down(xs){
+          border-bottom:1px solid $aqua;
+        }
         &.dz-clickable.frm_single_upload {
           max-width: none;
         }
@@ -129,6 +155,9 @@
         width: 100%;
         border-bottom: 0;
         position: relative;
+        @include media-breakpoint-down(xs){
+          border-bottom:1px solid $aqua;
+        }
         i {
           color: $red;
         }
@@ -154,4 +183,8 @@
     padding: rem-calc(22px);
     text-align: center;
     margin-bottom: rem-calc(-1px);
+    @include media-breakpoint-down(xs){
+      margin-left: 0%;
+      margin-top: 10px;
+    }
 }

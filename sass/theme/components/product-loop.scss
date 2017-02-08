@@ -4,16 +4,20 @@ article {
     @extend .border-top;
     @extend .border-right;
     @extend .border-bottom;
-    
+    @include media-breakpoint-down(xs) {
+      margin-bottom:rem-calc(30px);
+    }
+
     margin-bottom: -1px;
     .product-loop__image {
       img {
-        width: 100%;
         max-width: 100%;
-        padding: rem-calc(20px);
+
       }
       a {
         display: block;
+        padding: rem-calc(20px);
+        text-align: center;
       }
     }
     h4 {
