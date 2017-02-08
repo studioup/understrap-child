@@ -21041,7 +21041,7 @@ THEME.homepage = {
           verticalSwiping: true,
           arrows: false,
           autoplay: true,
-          autoplaySpeed: 6000,
+          autoplaySpeed: 4000,
           speed: 1000,
           dots: true,
           responsive: [
@@ -21059,8 +21059,39 @@ THEME.homepage = {
       if (jQuery('.js-product-slider').length){
         jQuery('.js-product-slider').slick({
           arrows:true,
-          dots:false
-        })
+          dots:false,
+          autoplay: true,
+          autoplaySpeed: 6000,
+          speed: 1000,
+        });
+        jQuery('.js-arrow-left').on("click",function(){
+          jQuery('.js-product-slider').slick('slickPrev');
+        });
+        jQuery('.js-arrow-right').on("click",function(){
+          jQuery('.js-product-slider').slick('slickNext');
+        });
+        jQuery('.js-slider-link').on("click",function(){
+          var position=jQuery(this).data('num');
+          jQuery('.js-product-slider').slick('slickGoTo',position);
+        });
+        jQuery('.js-slider-link a').on("click",function(e){
+          e.preventDefault();
+        });
+        jQuery('.js-product-slider').on('beforeChange', function(event, slick, currentSlide,nextSlide){
+
+          jQuery(".js-counter").removeClass("position-0");
+          jQuery(".js-counter").removeClass("position-1");
+          jQuery(".js-counter").removeClass("position-2");
+          jQuery(".js-counter").removeClass("position-3");
+          jQuery(".js-counter").removeClass("position-4");
+          jQuery(".js-counter").removeClass("position-5");
+          jQuery(".js-counter").addClass("position-"+nextSlide);
+        });
+        jQuery('.js-product-slider').on('afterChange', function(event, slick, currentSlide){
+          console.log(currentSlide);
+          var address = jQuery('.js-slider-link[data-num="'+currentSlide+'"]').data("url");
+          jQuery(".products-slider__link a").attr("href",address);
+        });
       }
     },
     initAnim01: function(){

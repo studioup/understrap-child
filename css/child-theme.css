@@ -10136,7 +10136,29 @@ h4, .h4 {
   display: flex; }
   .products__list-wrapper .products__list-image {
     flex-shrink: 0;
-    width: 3.4375rem; }
+    width: 3.4375rem;
+    position: relative; }
+    .products__list-wrapper .products__list-image .products__list-image-counter {
+      width: 8px;
+      position: absolute;
+      background: #d9534f;
+      background: linear-gradient(135deg, #c92c49 0%, #f2545b 50%, #c92c49 100%);
+      left: 50%;
+      transform: translateX(-50%);
+      transition: 0.3s ease height;
+      top: 43px;
+      z-index: -1;
+      height: 0px; }
+      .products__list-wrapper .products__list-image .products__list-image-counter.position-0 {
+        height: 64px; }
+      .products__list-wrapper .products__list-image .products__list-image-counter.position-1 {
+        height: 129px; }
+      .products__list-wrapper .products__list-image .products__list-image-counter.position-2 {
+        height: 193px; }
+      .products__list-wrapper .products__list-image .products__list-image-counter.position-3 {
+        height: 256px; }
+      .products__list-wrapper .products__list-image .products__list-image-counter.position-4 {
+        height: 320px; }
   .products__list-wrapper .products__list {
     margin: 0;
     padding: 0;
@@ -10149,6 +10171,7 @@ h4, .h4 {
     .products__list-wrapper .products__list li:last-child a {
       border-bottom: 0.0625rem solid #869D96; }
     .products__list-wrapper .products__list a {
+      transition: 0.3s ease all;
       height: 4rem;
       display: block;
       display: inline-flex;
@@ -10158,6 +10181,9 @@ h4, .h4 {
       font-weight: 300;
       color: black;
       border-top: 0.0625rem solid #869D96; }
+      .products__list-wrapper .products__list a:hover, .products__list-wrapper .products__list a:active, .products__list-wrapper .products__list a:focus {
+        text-decoration: none;
+        color: #d9534f; }
       @media (min-width: 992px) {
         .products__list-wrapper .products__list a {
           font-size: 1.5625rem; } }
@@ -10183,6 +10209,7 @@ h4, .h4 {
   justify-content: center;
   padding: 10px; }
   .products-slider__controls .products-slider__arrow {
+    cursor: pointer;
     width: 2.25rem;
     height: 2.25rem;
     line-height: 2.25rem;

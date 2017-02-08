@@ -17,12 +17,17 @@ $terms = get_terms( array(
         <h2 class="mt-4 mb-4 gradient-blue"><?php the_field('products_main_title') ?></h2>
         <div class="products__list-wrapper js-products-list mt-3 mb-3">
           <div class="products__list-image">
+            <div class="products__list-image-counter js-counter position-0"></div>
             <img src="<?php echo get_stylesheet_directory_uri() . '/img/fisarmonica.svg'; ?>" />
           </div>
           <ul class="products__list">
-            <?php foreach($terms as &$term ){ ?>
-              <li><a href="<?php echo get_term_link( $term ); ?>"><?php echo $term->name ?></a></li>
-            <?php } ?>
+            <?php
+            $c=0;
+             foreach($terms as &$term ){ ?>
+              <li class="js-slider-link" data-url="<?php echo get_term_link( $term ); ?>" data-num="<?php echo $c ?>"><a href="<?php echo get_term_link( $term ); ?>"><?php echo $term->name ?></a></li>
+            <?php
+            $c++;
+           } ?>
           </ul>
         </div>
       </div>
@@ -37,13 +42,13 @@ $terms = get_terms( array(
           <?php } ?>
         </div>
         <div class="products-slider__controls border-left border-top xs-border-right">
-          <div class="products-slider__arrow products-slider__arrow--left">
+          <div class="products-slider__arrow products-slider__arrow--left js-arrow-left">
             <i class="fa fa-angle-left"></i>
           </div>
           <div class="products-slider__link">
             <a href="#" class="btn btn-secondary">Read more</a>
           </div>
-          <div class="products-slider__arrow products-slider__arrow--right">
+          <div class="products-slider__arrow products-slider__arrow--right js-arrow-right">
             <i class="fa fa-angle-right"></i>
           </div>
         </div>
