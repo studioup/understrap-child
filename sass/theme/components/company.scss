@@ -1,5 +1,11 @@
 .company__slider {
 
+  .company__slider-item {
+    @include media-breakpoint-down(xs){
+      padding-left:rem-calc(15px);
+      padding-right:rem-calc(15px);
+    }
+  }
   .slick-dots li:nth-child(1) button:before {content: ' ';width: 14px;height: 14px;border-radius: 100%;border: 1px solid #869D96;opacity: 1;}
   .slick-dots li:nth-child(2) button:before {content: ' ';margin-left: 1px; width: 12px;height: 12px;border: 1px solid #869D96;opacity: 1;transform: rotate(45deg);margin-top: 1px;}
   .slick-dots li:nth-child(3) button:before {content: ' ';width: 14px;height: 14px;border: 1px solid #869D96;opacity: 1;}

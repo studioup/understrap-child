@@ -129,6 +129,7 @@ gulp.task('watch-bs', ['browser-sync', 'watch', 'cssnano'], function () { });
 gulp.task('scripts', function() {
     var scripts = [
         basePaths.dev + 'js/bodymovin.js',
+        basePaths.dev + 'js/cookies-enabler.js',
         basePaths.dev + 'js/slick.js', // Must be loaded before BS4
         basePaths.dev + 'js/tether.js', // Must be loaded before BS4
         //basePaths.dev + 'js/aos.js', // Must be loaded before BS4
@@ -159,6 +160,10 @@ gulp.task('scripts', function() {
 gulp.task('copy-assets', function() {
 
 ////////////////// All Bootstrap 4 Assets /////////////////////////
+
+    gulp.src(basePaths.bower + 'cookies-enabler/*.js')
+      .pipe(gulp.dest(basePaths.dev + '/js'));
+
 // Copy all Bootstrap JS files
     gulp.src(basePaths.node + 'bootstrap/dist/js/**/*.js')
        .pipe(gulp.dest(basePaths.dev + '/js/bootstrap4'));

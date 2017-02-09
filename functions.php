@@ -31,3 +31,11 @@ function wpdocs_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 
 require_once 'Mobile_Detect.php';
+
+function cookie_consent(){
+    if (isset($_COOKIE['ce-consent']) && $_COOKIE['ce-consent'] == 'Y'){
+        return true;
+    }
+    echo '<div class="ce-blocked-iframe"></div>';
+    return false;
+}

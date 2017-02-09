@@ -7,8 +7,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php if ( 'container' == $container ) : ?>
   <div class="container pl-xl-0 pr-xl-0">
 <?php endif; ?>
-
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="navbar-mobile-fixed">
+     <button class="navbar-toggler js-navbar-toggle" type="button">
         <span class="navbar-toggler__bar navbar-toggler__bar1"></span>
         <span class="navbar-toggler__bar navbar-toggler__bar2"></span>
         <span class="navbar-toggler__bar navbar-toggler__bar3"></span>
@@ -24,9 +24,9 @@ $container = get_theme_mod( 'understrap_container_type' );
       <?php } else {
         the_custom_logo();
       } ?><!-- end custom logo -->
-
+      </div>
     <!-- The WordPress Menu goes here -->
-    <div id="navbarNavDropdown" class="collapse navbar-main navbar-collapse align-items-center justify-content-end">
+    <div id="navbarNavDropdown" class="navbar-main navbar-collapse align-items-center justify-content-end">
     <?php wp_nav_menu(
       array(
         'theme_location'  => 'primary',

@@ -2,6 +2,55 @@
 
   padding: 0 1rem;
   border-bottom:rem-calc(1px) solid $aqua;
+
+  @include media-breakpoint-down(sm){
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid $aqua;
+    height: 50px;
+    z-index: 1000;
+    
+  }
+  @include media-breakpoint-down(sm){
+    .container {
+      width:100%;
+      margin: 0;
+    }
+  }
+
+  .navbar-mobile-fixed {
+    @include media-breakpoint-down(sm){
+      background: white;
+      margin-left: rem-calc(-16px);
+      padding-right: rem-calc(16px);
+      padding-left: rem-calc(16px);
+      margin-right: rem-calc(-16px);
+      border-bottom: rem-calc(1px) solid;
+      height: rem-calc(50px);
+    }
+  }
+
+  .navbar-main {
+    @include media-breakpoint-down(sm){
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        padding-top: rem-calc(50px);
+        top: 0;
+        background: white;
+        transform: translateX(100%);
+        z-index: -1;
+        transition: 0.3s ease all;
+        overflow: auto;
+        .menu-open & {
+          transform: translateX(0%);
+        }
+    }
+  }
+
   .nav-link {
     color:black;
     font-size: rem-calc(14px);
@@ -9,17 +58,19 @@
     position: relative;
     text-transform:uppercase;
     &:before {
-      content: ' ';
-      position: absolute;
-      width: calc(100% - 40px);
-      border: 0;
-      border-bottom: 2px solid $brand-primary;
-      opacity: 0;
-      left: rem-calc(20px);
-      bottom: rem-calc(30px);
-      display: block;
-      margin: 0;
-      transition: 0.3s ease opacity;
+      @include media-breakpoint-up(sm){
+        content: ' ';
+        position: absolute;
+        width: calc(100% - 40px);
+        border: 0;
+        border-bottom: 2px solid $brand-primary;
+        opacity: 0;
+        left: rem-calc(20px);
+        bottom: rem-calc(30px);
+        display: block;
+        margin: 0;
+        transition: 0.3s ease opacity;
+      }
     }
     &:hover, &:active {
       color: $aqua;
@@ -32,8 +83,10 @@
     }
   }
   .dropdown:hover {
-    .dropdown-menu {
-      display: block;
+    @include media-breakpoint-up(sm){
+      .dropdown-menu {
+        display: block;
+      }
     }
     & > .nav-link {
       color: $aqua;
@@ -57,11 +110,48 @@
       padding-top: rem-calc(3px);
       height: rem-calc(95px);
       line-height: rem-calc(95px);
+      @include media-breakpoint-down(md) {
+        padding: 0 rem-calc(15px);
+      }
+      @include media-breakpoint-down(sm){
+        line-height: rem-calc(30px);
+        height: auto;
+        padding: rem-calc(15px) rem-calc(20px);        
+      }
+    }
+  }
+  .menu-item {
+    @include media-breakpoint-down(sm){
+      border-bottom: rem-calc(1px) solid $aqua;
+      &.menu-item-has-children > a {
+        position: relative;
+        &:before {
+          content: "\f107";
+          font-family: FontAwesome;
+          position: absolute;
+          right:0;
+          color: $red;
+          top: rem-calc(11px);
+          font-size: rem-calc(23px);
+          padding: 0 rem-calc(15px);
+          transition: 0.3s ease all;
+        }
+      }
+      &.menu-item-has-children.show > a {
+        &:before {
+          transform: rotate(180deg);
+        }
+      }
     }
   }
   .navbar-alt {
     .nav-link {
       padding: 0 rem-calc(3px);
+      @include media-breakpoint-down(sm){
+        line-height: rem-calc(30px);
+        height: auto;
+        padding: rem-calc(15px) rem-calc(20px);        
+      }
     }
   }
   .dropdown-menu {
@@ -72,26 +162,34 @@
     min-width: 12rem;
     margin-top: 0;
     box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    @include media-breakpoint-down(sm){
+      box-shadow:none;
+      border: 0;
+      border-top: rem-calc(1px) solid $aqua;
+    }
     &.dropdown-menu-right {
         left: inherit;
         right: rem-calc(-8px);
     }
     &:before {
-       border-bottom: 10px solid $aqua;
-       border-left: 10px solid rgba(0, 0, 0, 0);
-       border-right: 10px solid transparent;
-       content: "";
-       height: 0;
-       position: absolute;
-       left: 10px;
-       top: -10px;
-       width: 0;
+       @include media-breakpoint-up(sm){
+        border-bottom: 10px solid $aqua;
+        border-left: 10px solid rgba(0, 0, 0, 0);
+        border-right: 10px solid transparent;
+        content: "";
+        height: 0;
+        position: absolute;
+        left: 10px;
+        top: -10px;
+        width: 0;
+       }
    }
    &.dropdown-menu-right:before {
       left: inherit;
       right: 10px;
    }
    &:after {
+     @include media-breakpoint-up(sm){
        border-bottom: 9px solid #ffffff;
        border-left: 9px solid rgba(0, 0, 0, 0);
        border-right: 9px solid transparent;
@@ -101,6 +199,7 @@
        left: 11px;
        top: -9px;
        width: 0;
+     }
    }
    &.dropdown-menu-right:after {
       left: inherit;
@@ -119,6 +218,11 @@
        line-height: 1;
        @extend .background-dotted-red;
        text-transform: initial;
+        @include media-breakpoint-down(sm){
+              padding: rem-calc(21px) rem-calc(20px);
+              padding-left: rem-calc(35px);
+              font-size: rem-calc(16px);
+        }
        &:hover {
          background: none;
          color: black;
@@ -159,3 +263,54 @@
     }
   }
 }
+
+.navbar-toggler {
+    position: absolute;
+    display: block;
+    width: rem-calc(40px);
+    height: rem-calc(40px);
+    right: 0;
+    padding: 0;
+    margin: 0;
+    outline-width: 0px !important;
+    top: rem-calc(5px);
+    overflow: hidden;
+    .navbar-toggler__bar {
+        position: absolute;
+        width: 80%;
+        left: 10%;
+        height: rem-calc(4px);
+        border-radius: rem-calc(6px);
+        transition: all .3s ease;
+        &.navbar-toggler__bar1 {
+            top: rem-calc(7px);
+            background: $aqua;
+            .menu-open & {
+                transform: rotate(-45deg) translateY(-2px);
+                transform-origin: 100%;
+            }
+        }
+
+        &.navbar-toggler__bar3 {
+            bottom: rem-calc(7px);
+            background: $aqua;
+            .menu-open & {
+                transform: rotate(45deg);
+                transform-origin: 100% 0;
+            }
+        }
+
+        &.navbar-toggler__bar2 {
+            top: 50%;
+            margin-top: rem-calc(-2px);
+            background: $red;
+            .menu-open & {
+                transform: translateX(-120%);
+                opacity: 0;
+            }
+        }
+    }
+}
+
+
+

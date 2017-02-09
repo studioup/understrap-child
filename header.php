@@ -23,7 +23,8 @@ $container = get_theme_mod( 'understrap_container_type' );
   <script src="https://use.typekit.net/nho1ejz.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
   <link href="https://fonts.googleapis.com/css?family=Lekton:400,700" rel="stylesheet">
-	<?php wp_head(); ?>
+  <?php wp_head(); ?>
+  <script>var homeUrl = '<?php global $wp; echo home_url( $wp->request ); ?>'; </script>
 </head>
 
 <body <?php body_class(); ?>>

@@ -1,7 +1,7 @@
 <ul class="navbar-alt navbar-nav">
-  <li class="menu-item dropdown">
+  <li class="menu-item menu-item-has-children dropdown">
     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown-hover" aria-haspopup="true" aria-expanded="false">
-      <img src="<?php echo get_stylesheet_directory_uri() . '/img/icon-world.svg'; ?>" />
+      <img src="<?php echo get_stylesheet_directory_uri() . '/img/icon-world.svg'; ?>" /> <div class="d-inline hidden-md-up">Locations</div>
     </a>
     <ul class="dropdown-menu dropdown-menu-right" role="menu">
     	<li class="menu-item"><a title="Pagina di esempio." href="http://localhost:8888/studioup/ablerex/pagina-di-esempio/" class="nav-link">USA</a></li>
@@ -9,9 +9,9 @@
       <li class="menu-item"><a title="Pagina di esempio." href="http://localhost:8888/studioup/ablerex/pagina-di-esempio/" class="nav-link">Singapore</a></li>
     </ul>
   </li>
-  <li class="menu-item dropdown">
+  <li class="menu-item menu-item-has-children dropdown">
     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <img src="<?php echo get_stylesheet_directory_uri() . '/img/icon-search.svg'; ?>" />
+      <img src="<?php echo get_stylesheet_directory_uri() . '/img/icon-search.svg'; ?>" /> <div class="d-inline hidden-md-up">Search</div>
     </a>
     <div class="dropdown-menu dropdown-menu-right" role="menu">
       <div class="nav__search">
@@ -20,9 +20,9 @@
       </div>
     </div>
   </li>
-  <li class="menu-item dropdown">
+  <li class="menu-item menu-item-has-children dropdown">
     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown-hover" aria-haspopup="true" aria-expanded="false">
-      <img src="<?php echo get_stylesheet_directory_uri() . '/img/icon-lock.svg'; ?>" />
+      <img src="<?php echo get_stylesheet_directory_uri() . '/img/icon-lock.svg'; ?>" /> <div class="d-inline hidden-md-up">Login</div>
     </a>
     <div class="dropdown-menu dropdown-menu-right" role="menu">
       <div class="nav__login">
@@ -35,7 +35,7 @@
         <div class="nav__login-section">
           <div class="row no-gutters">
             <div class="col-sm-6">
-              <div class="nav__login-minisection border-bottom border-right">
+              <div class="nav__login-minisection border-bottom border-right hidden-xs-border-right">
                 <div class="form-check">
 
                     <input type="checkbox" class="form-check-input">
@@ -44,7 +44,7 @@
                   </label>
                 </div>
               </div>
-              <div class="nav__login-minisection border-right">
+              <div class="nav__login-minisection border-right xs-border-bottom hidden-xs-border-right">
                 <a href="#" class="btn btn-info btn-sm btn--has-arrow btn-block">Reset Password</a>
               </div>
             </div>

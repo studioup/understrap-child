@@ -12691,6 +12691,478 @@ GroupEffect.prototype.init = function(data,element,dynamicProperties){
         }
     }
 };var bodymovinjs = {}; function play(animation){ animationManager.play(animation); } function pause(animation){ animationManager.pause(animation); } function togglePause(animation){ animationManager.togglePause(animation); } function setSpeed(value,animation){ animationManager.setSpeed(value, animation); } function setDirection(value,animation){ animationManager.setDirection(value, animation); } function stop(animation){ animationManager.stop(animation); } function moveFrame(value){ animationManager.moveFrame(value); } function searchAnimations(){ if(standalone === true){ animationManager.searchAnimations(animationData,standalone, renderer); }else{ animationManager.searchAnimations(); } } function registerAnimation(elem){ return animationManager.registerAnimation(elem); } function resize(){ animationManager.resize(); } function start(){ animationManager.start(); } function goToAndStop(val,isFrame, animation){ animationManager.goToAndStop(val,isFrame, animation); } function setSubframeRendering(flag){ subframeEnabled = flag; } function loadAnimation(params){ if(standalone === true){ params.animationData = JSON.parse(animationData); } return animationManager.loadAnimation(params); } function destroy(animation){ return animationManager.destroy(animation); } function setQuality(value){ if(typeof value === 'string'){ switch(value){ case 'high': defaultCurveSegments = 200; break; case 'medium': defaultCurveSegments = 50; break; case 'low': defaultCurveSegments = 10; break; } }else if(!isNaN(value) && value > 1){ defaultCurveSegments = value; } if(defaultCurveSegments >= 50){ roundValues(false); }else{ roundValues(true); } } function installPlugin(type,plugin){ if(type==='expressions'){ expressionsPlugin = plugin; } } function getFactory(name){ switch(name){ case "propertyFactory": return PropertyFactory;case "shapePropertyFactory": return ShapePropertyFactory; case "matrix": return Matrix; } } bodymovinjs.play = play; bodymovinjs.pause = pause; bodymovinjs.togglePause = togglePause; bodymovinjs.setSpeed = setSpeed; bodymovinjs.setDirection = setDirection; bodymovinjs.stop = stop; bodymovinjs.moveFrame = moveFrame; bodymovinjs.searchAnimations = searchAnimations; bodymovinjs.registerAnimation = registerAnimation; bodymovinjs.loadAnimation = loadAnimation; bodymovinjs.setSubframeRendering = setSubframeRendering; bodymovinjs.resize = resize; bodymovinjs.start = start; bodymovinjs.goToAndStop = goToAndStop; bodymovinjs.destroy = destroy; bodymovinjs.setQuality = setQuality; bodymovinjs.installPlugin = installPlugin; bodymovinjs.__getFactory = getFactory; bodymovinjs.version = '4.5.2'; function checkReady(){ if (document.readyState === "complete") { clearInterval(readyStateCheckInterval); searchAnimations(); } } function getQueryVariable(variable) { var vars = queryString.split('&'); for (var i = 0; i < vars.length; i++) { var pair = vars[i].split('='); if (decodeURIComponent(pair[0]) == variable) { return decodeURIComponent(pair[1]); } } } var standalone = '__[STANDALONE]__'; var animationData = '__[ANIMATIONDATA]__'; var renderer = ''; if(standalone) { var scripts = document.getElementsByTagName('script'); var index = scripts.length - 1; var myScript = scripts[index]; var queryString = myScript.src.replace(/^[^\?]+\??/,''); renderer = getQueryVariable('renderer'); } var readyStateCheckInterval = setInterval(checkReady, 100); return bodymovinjs; }));  
+// Made with milk and cookies by Nicholas Ruggeri and Gianmarco Simone
+// https://github.com/nicholasruggeri/cookies-enabler
+// https://github.com/nicholasruggeri
+// https://github.com/gsimone
+
+window.COOKIES_ENABLER = window.COOKIES_ENABLER || (function () {
+
+    'use strict'
+
+    var defaults = {
+
+        scriptClass: 'ce-script',
+        iframeClass: 'ce-iframe',
+
+        acceptClass: 'ce-accept',
+        disableClass: 'ce-disable',
+        dismissClass: 'ce-dismiss',
+
+        bannerClass: 'ce-banner',
+        bannerHTML:
+
+            document.getElementById('ce-banner-html') !== null ?
+
+                document.getElementById('ce-banner-html').innerHTML :
+
+                '<p>This website uses cookies. '
+                    +'<a href="#" class="ce-accept">'
+                    +'Enable Cookies'
+                    +'</a>'
+                    +'</p>',
+        eventScroll: false,
+        scrollOffset: 200,
+        clickOutside: false,
+        cookieName: 'ce-cookie',
+        cookieDuration: '365',
+        wildcardDomain: false,
+
+        iframesPlaceholder: true,
+        iframesPlaceholderHTML:
+
+            document.getElementById('ce-iframePlaceholder-html') !== null ?
+
+                document.getElementById('ce-iframePlaceholder-html').innerHTML :
+
+                '<p>To view this content you need to'
+                    +'<a href="#" class="ce-accept">Enable Cookies</a>'
+                +'</p>',
+
+        iframesPlaceholderClass: 'ce-iframe-placeholder',
+
+        onEnable: '',
+        onDismiss: '',
+        onDisable: ''
+
+    },
+    opts, domElmts, start_Y;
+
+    function _extend() {
+
+        var i, key;
+        for (i=1; i<arguments.length; i++)
+            for (key in arguments[i])
+                if(arguments[i].hasOwnProperty(key))
+                    arguments[0][key] = arguments[i][key];
+        return arguments[0];
+
+    }
+
+    function _debounce(func, wait, immediate) {
+        var timeout;
+        return function() {
+            var context = this, args = arguments;
+            var later = function() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            if (callNow) func.apply(context, args);
+        };
+    }
+
+    function _getClosestParentWithClass(el, parentClass) {
+
+        do {
+            if (_hasClass(el, parentClass)) {
+                // tag name is found! let's return it. :)
+                return el;
+            }
+        } while (el = el.parentNode);
+
+        return null;
+    }
+
+    function _hasClass(el, cls) {
+        return (' ' + el.className + ' ').indexOf(' ' + cls + ' ') > -1;
+    }
+
+    var handleScroll = function() {
+
+        if (Math.abs(window.pageYOffset - start_Y) > opts.scrollOffset) enableCookies();
+
+    };
+
+    var bindUI = function() {
+
+        domElmts = {
+            accept:  document.getElementsByClassName(opts.acceptClass),
+            disable: document.getElementsByClassName(opts.disableClass),
+            banner: document.getElementsByClassName(opts.bannerClass),
+            dismiss: document.getElementsByClassName(opts.dismissClass)
+        }
+
+        var i,
+            accept = domElmts.accept,
+            accept_l = accept.length,
+            disable = domElmts.disable,
+            disable_l = disable.length,
+            dismiss = domElmts.dismiss,
+            dismiss_l = dismiss.length;
+
+        if (opts.eventScroll) {
+            window.addEventListener('load', function(){
+
+                start_Y = window.pageYOffset;
+                window.addEventListener('scroll', handleScroll);
+
+            });
+        }
+
+        if (opts.clickOutside) {
+
+            document.addEventListener("click", function(e){
+
+                var element = e.target;
+
+                // ignore the click if it is inside of any of the elements created by this plugin
+                if(
+                    _getClosestParentWithClass(element, opts.iframesPlaceholderClass) ||
+                    _getClosestParentWithClass(element, opts.disableClass) ||
+                    _getClosestParentWithClass(element, opts.bannerClass) ||
+                    _getClosestParentWithClass(element, opts.dismissClass) ||
+                    _getClosestParentWithClass(element, opts.disableClass)
+               ){
+                    return false;
+                }
+
+                enableCookies();
+
+            });
+        }
+
+        for (i = 0; i < accept_l; i++) {
+
+            accept[i].addEventListener("click", function(ev) {
+                ev.preventDefault();
+                enableCookies(ev);
+            });
+
+        }
+
+        for (i = 0; i < disable_l; i++) {
+
+            disable[i].addEventListener("click", function(ev) {
+                ev.preventDefault();
+                disableCookies(ev);
+            });
+
+        }
+
+        for (i = 0; i < dismiss_l; i++) {
+
+            dismiss[i].addEventListener("click", function (ev) {
+                ev.preventDefault();
+                banner.dismiss();
+            });
+
+        }
+
+    };
+
+    var init = function(options) {
+
+        opts = _extend({}, defaults, options);
+
+        if (cookie.get() == 'Y') {
+
+            if (typeof opts.onEnable === "function") opts.onEnable();
+
+            scripts.get();
+            iframes.get();
+
+        } else if (cookie.get() == 'N'){
+
+            if (typeof opts.onDisable === "function") opts.onDisable();
+
+            iframes.hide();
+            bindUI();
+
+        } else {
+
+            banner.create();
+            iframes.hide();
+            bindUI();
+
+        }
+    };
+
+    var enableCookies = _debounce(function(event) {
+
+        if (typeof event != "undefined" && event.type === 'click'){
+
+            event.preventDefault();
+
+        }
+
+        if (cookie.get() != 'Y') {
+
+            cookie.set();
+            scripts.get();
+
+            iframes.get();
+            iframes.removePlaceholders();
+
+            banner.dismiss();
+            window.removeEventListener('scroll', handleScroll);
+
+            if (typeof opts.onEnable === "function") opts.onEnable();
+
+        }
+
+    }, 250, false);
+
+    var disableCookies = function(event){
+
+        if (typeof event != "undefined" && event.type === 'click'){
+
+            event.preventDefault();
+
+        }
+
+        if (cookie.get() != 'N'){
+
+            cookie.set('N');
+
+            banner.dismiss();
+            window.removeEventListener('scroll', handleScroll);
+
+            if (typeof opts.onDisable === "function") opts.onDisable();
+
+        }
+
+    }
+
+    var banner = (function() {
+
+        function create() {
+
+            var el = '<div class="'+ opts.bannerClass +'">'
+                    + opts.bannerHTML
+                    +'</div>';
+
+            document.body.insertAdjacentHTML('beforeend', el);
+
+        }
+
+        function dismiss(){
+
+            domElmts.banner[0].style.display = 'none';
+
+            if (typeof opts.onDismiss === "function") opts.onDismiss();
+
+        }
+
+        return{
+
+            create: create,
+            dismiss: dismiss
+
+        }
+
+    })();
+
+    var cookie = (function() {
+
+        function set(val){
+
+            var value = typeof val !== "undefined" ? val : "Y",
+                date, expires, host, domainParts, domain;
+
+            if (opts.cookieDuration) {
+                date = new Date();
+                date.setTime(date.getTime()+(opts.cookieDuration*24*60*60*1000));
+                expires = "; expires="+date.toGMTString();
+            } else {
+                expires = "";
+            }
+            
+            host = location.hostname;
+            // Means localhost or that the user does not want to enable cookies for all subdomains
+            if(host.split('.') === 1 || !opts.wildcardDomain) {
+                document.cookie = opts.cookieName +"="+ value+expires +"; path=/";
+            } else {
+                // We start by stying to set a cookie from a subdomain eg foo.bar.com -> .bar.com
+                // If that does not work we try to set it for the top domain instead 
+                domainParts = host.split('.');
+                domainParts.shift();
+                domain = '.' + domainParts.join('.');
+                
+                document.cookie = opts.cookieName +"="+ value+expires +"; path=/; domain="+domain;
+                
+                // Check if we managed to set the cookie, if not we where on a top-domain
+                if( cookie.get() == null ) {
+                    domain = '.'+host;
+                    document.cookie = opts.cookieName +"="+ value+expires +"; path=/; domain="+domain;
+                }
+            }
+            
+            
+        }
+
+        function get(){
+
+            var cookies = document.cookie.split(";"),
+                l = cookies.length,
+                i, x, y;
+
+            for (i = 0; i < l; i++){
+                x = cookies[i].substr(0,cookies[i].indexOf("="));
+                y = cookies[i].substr(cookies[i].indexOf("=")+1);
+                x = x.replace(/^\s+|\s+$/g,"");
+                if (x == opts.cookieName) {
+                    return unescape(y);
+                }
+            }
+
+        }
+
+        return{
+            set: set,
+            get: get
+        }
+
+    })();
+
+    var iframes = (function() {
+
+        function makePlaceholder(iframe) {
+
+            var placeholderElement = document.createElement('div');
+
+            placeholderElement.className = opts.iframesPlaceholderClass;
+
+            placeholderElement.innerHTML = opts.iframesPlaceholderHTML;
+
+            iframe.parentNode.insertBefore(placeholderElement, iframe);
+
+        }
+
+        function removePlaceholders() {
+
+            var iframePlaceholders = document.getElementsByClassName(opts.iframesPlaceholderClass),
+                n = iframePlaceholders.length,
+                i;
+
+            for (i = n - 1; i >= 0; i--){
+
+                iframePlaceholders[i].parentNode.removeChild(iframePlaceholders[i]);
+                
+            }
+
+        }
+
+        function hide() {
+
+            var iframes = document.getElementsByClassName(opts.iframeClass),
+                n = iframes.length,
+                src, iframe, i;
+
+            for (i = 0; i < n; i++){
+
+                iframe = iframes[i];
+                iframe.style.display = 'none';
+
+                if (opts.iframesPlaceholder) makePlaceholder(iframe);
+
+            }
+
+        }
+
+        function get() {
+
+            var iframes = document.getElementsByClassName(opts.iframeClass),
+                n = iframes.length,
+                src, iframe, i;
+
+            for (i = 0; i < n; i++){
+
+                iframe = iframes[i];
+
+                src = iframe.attributes[ 'data-ce-src' ].value;
+                iframe.src = src;
+                iframe.style.display = 'block';
+
+            }
+
+        }
+
+        return{
+            hide: hide,
+            get: get,
+            removePlaceholders: removePlaceholders
+        }
+
+    })();
+
+    var scripts = (function() {
+
+        function get() {
+
+            var scripts = document.getElementsByClassName(opts.scriptClass),
+                n = scripts.length,
+                documentFragment = document.createDocumentFragment(),
+                i, y, s, attrib, el;
+
+            for (i = 0; i < n; i++){
+
+                if (scripts[i].hasAttribute('data-ce-src')){
+
+                    if (typeof postscribe === "undefined"){
+                        postscribe(scripts[i].parentNode, '<script src="' + scripts[i].getAttribute("data-ce-src") + '"></script>');
+                    }
+
+                } else {
+
+                    s = document.createElement('script');
+                    s.type = 'text/javascript';
+                    for (y = 0; y < scripts[i].attributes.length; y++) {
+                        attrib = scripts[i].attributes[y];
+                        if (attrib.specified) {
+                            if ((attrib.name != 'type') && (attrib.name != 'class')){
+                                s.setAttribute(attrib.name, attrib.value);
+                            }
+                        }
+                    }
+                    s.innerHTML = scripts[i].innerHTML;
+                    documentFragment.appendChild(s);
+
+                }
+
+            }
+
+            document.body.appendChild(documentFragment);
+
+        }
+
+        return{
+            get: get
+        }
+
+    })();
+
+
+    return {
+        init: init,
+        enableCookies: enableCookies,
+        dismissBanner: banner.dismiss
+    };
+
+}());
+
 /*
      _ _      _       _
  ___| (_) ___| | __  (_)___
@@ -20981,6 +21453,8 @@ var THEME = {
     init: function() {
 			this.currentPageInit();
       this.initMenu();
+      this.initMobileMenu();
+      //this.manageCookie();
     },
     currentPageInit: function() {
 				THEME.$currentPageContentWrapper = jQuery(".js-page").eq(0);
@@ -20994,8 +21468,41 @@ var THEME = {
             jQuery(this).parent().toggleClass("show");
           });
         }
+    },
+    initMobileMenu: function(){
+      jQuery('.js-navbar-toggle').on("click",function(){
+        jQuery('body').toggleClass("menu-open");
+      });
+    },
+    manageCookie: function() {
+      COOKIES_ENABLER.init({
+          element: 'ce-elm', // Default class
+          bannerHTML: '<div class="ce-banner__inner">'+
+                          '<h4 id="ce-banner__header">'+
+                              '<div class="cookie-ita">Questo sito internet utilizza cookies</div>'+
+                              '<div class="cookie-eng" style="display:none">This website uses cookies</div>'+
+                          '</h4>'+
+                          '<div class="cookie-ita">Questo sito internet utilizza cookies per migliorare la vostra esperienza d’uso. Utilizzando il nostro sito internet autorizza l’installazione dei cookies in accordo con la nostra Cookie Policy.</div>'+
+                          '<div class="cookie-eng" style="display:none">This website uses cookies to improve user experience. By using our website you consent to all cookies in accordance with our Cookie Policy.</div>'+
+                          '<br>'+
+                          '<div class="ce-banner__buttons">'+
+                              '<a href="#" class="ce-trigger">'+
+                                  '<div class="cookie-ita">Accetto</div>'+
+                                  '<div class="cookie-eng" style="display:none">Enable cookies</div>'+
+                              '</a>'+
+                              '<a class="ce-more" target="_blank"  href="http://privacy.studioup.it/cookies-policy/?url='+ homeUrl + '" target="_self">'+
+                                  '<div class="cookie-ita">Maggiori informazioni</div>'+
+                                  '<div class="cookie-eng" style="display:none">Privacy policy</div>'+
+                              '</a>'+
+                          '</div>'+
+                      '</div>',
+          duration: '365', // Default duration cookis 365 days
+          eventScroll: false, // Default false
+          preventCookies: true,
+          gatAnonymized : true,
+          whitelistedCookies: ['_cfduid']
+      });
     }
-
 };
 
 THEME.homepage = {

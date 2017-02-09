@@ -31,3 +31,9 @@
   }
 
 }
+
+.site {
+  @include media-breakpoint-down(sm) {
+    padding-top: rem-calc(50px);
+  }
+}

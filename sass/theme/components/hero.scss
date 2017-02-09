@@ -68,8 +68,12 @@ $lowHeight: rem-calc(74px);
       color: white;
       align-self: center;
       padding: 0 rem-calc(50px);
+      text-shadow: 0px 0px rem-calc(17px) rgba(0,0,0,0.7);
       @include media-breakpoint-up(sm) {
         padding: 0 rem-calc(90px);
+      }
+      @include media-breakpoint-down(xs) {
+        padding: 0 rem-calc(10px);
       }
       h1 {
         margin-bottom: rem-calc(20px);
