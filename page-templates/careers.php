@@ -12,7 +12,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 <div class="js-page" data-jsid="careers">
   <div class="main-section ">
-    <div class="layout">
+    <div class="layout no-overflow">
       <div class="layout__col1 ">
       </div>
       <div class="layout__col2 container ">
@@ -111,11 +111,12 @@ $container = get_theme_mod( 'understrap_container_type' );
             </div>
           </div>
           <div class="col-md-2 col-sm-3 border-right">
-
+            <div class="cr_anim_01" id="anim01"></div>
           </div>
         </div>
       </div>
       <div class="layout__col3 ">
+        <div class="cr_anim_line"></div>
       </div>
     </div>
   </div>
@@ -144,7 +145,7 @@ $container = get_theme_mod( 'understrap_container_type' );
       </div>
       <div class="layout__col2 container ">
         <div class="row no-gutters">
-          <div class="col-sm-12 border-right hidden-xs-border-right">
+          <div class="col-sm-12 col-md-9 border-right hidden-xs-border-right">
             <div class="pl-md-6">
               <div class="contacts__form ">
                 <?php the_field('form_content') ?>
@@ -159,22 +160,43 @@ $container = get_theme_mod( 'understrap_container_type' );
       <div class="layout__col3 ">
       </div>
     </div>
-    <div class="layout">
+    <div class="layout hidden-xs-down ">
       <div class="layout__col1 ">
       </div>
       <div class="layout__col2 container ">
         <div class="row no-gutters">
-          <div class="col-sm-9 border-right hidden-xs-border-right">
-            <div class="pt-6"></div>
+          <div class="col-sm-9">
+            <div class="pt-7">
+
+
+            </div>
           </div>
-          <div class="col-sm-2 border-top hidden-xs-border-top">
+          <div class="col-sm-2 border-top border-right hidden-xs-border-right hidden-xs-border-top">
+            <div class="cr_anim_02" id="anim02"></div>
           </div>
         </div>
       </div>
       <div class="layout__col3  ">
       </div>
     </div>
+    <div class="layout mt-3 mt-sm-0">
+      <div class="layout__col1">
+      </div>
+      <div class="layout__col2 container border-right hidden-xs-border-right">
+        <div class="anim_06" id="anim06"></div>
+        <div class="row no-gutters">
+          <div class="border-top border-left xs-border-right col-lg-1 col-md-2 offset-lg-11 offset-sm-10">
+            <div class="go-top">
+              <a href="#" class="js-totop">⇡ Top</a>
+            </div>
+          </div>
+        </div>
 
+
+      </div>
+      <div class="layout__col3">
+      </div>
+    </div>
 
 
     </div>

@@ -39,3 +39,44 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+.nw_anim_01 {
+    position: absolute;
+    top: 50%;
+    width: rem-calc(280px);
+    transform: translateY(-50%);
+}
+
+.nw_anim_line {
+    border-bottom: 2px solid #d1dad7;
+    width: 80%;
+    left: 20%;
+    top: 50%;
+    margin-top: rem-calc(15px);
+    position: relative;
+}
+
+.cr_anim_line {
+    border-bottom:rem-calc(1px) solid #9eb1aa;
+    width: 80%;
+    left: 20%;
+    top: 50%;
+    margin-top: rem-calc(-4px);
+    position: relative;
+}
+
+.cr_anim_01 {
+    position: absolute;
+    top: 50%;
+    left: rem-calc(-13px);
+    width: rem-calc(450px);
+    transform: translateY(-50%);
+}
+
+.cr_anim_02 {
+    position: absolute;
+    right: rem-calc(-35px);
+    width: rem-calc(70px);
+    top: rem-calc(5px);
+}
+

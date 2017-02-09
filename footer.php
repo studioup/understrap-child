@@ -40,9 +40,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="col-lg-4 offset-lg-2 col-sm-5 background-dotted-red border-left hidden-xs-border-left">
 						<div class="pl-5 pr-5 pt-5 pb-5">
 							<h4>Info & Support</h4>
-							<a href="#" class="mt-2 btn btn-secondary">Contact Now</a>
+							<a href="<?php echo get_permalink( get_page_by_path( 'contacts-support' ) ); ?>" class="mt-2 btn btn-secondary">Contact Now</a>
 							<h4 class="mt-4">Careers</h4>
-							<a href="#" class="mt-2 btn btn-secondary">Contact Now</a>
+							<a href="<?php echo get_permalink( get_page_by_path( 'careers' ) ); ?>" class="mt-2 btn btn-secondary">Contact Now</a>
 						</div>
 					</div>
 					<div class="col-sm-1 border-left hidden-xs-down">

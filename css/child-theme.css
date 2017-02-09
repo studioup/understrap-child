@@ -10561,6 +10561,41 @@ footer .footer-list {
   top: 50%;
   transform: translateY(-50%); }
 
+.nw_anim_01 {
+  position: absolute;
+  top: 50%;
+  width: 17.5rem;
+  transform: translateY(-50%); }
+
+.nw_anim_line {
+  border-bottom: 2px solid #d1dad7;
+  width: 80%;
+  left: 20%;
+  top: 50%;
+  margin-top: 0.9375rem;
+  position: relative; }
+
+.cr_anim_line {
+  border-bottom: 0.0625rem solid #9eb1aa;
+  width: 80%;
+  left: 20%;
+  top: 50%;
+  margin-top: -0.25rem;
+  position: relative; }
+
+.cr_anim_01 {
+  position: absolute;
+  top: 50%;
+  left: -0.8125rem;
+  width: 28.125rem;
+  transform: translateY(-50%); }
+
+.cr_anim_02 {
+  position: absolute;
+  right: -2.1875rem;
+  width: 4.375rem;
+  top: 0.3125rem; }
+
 .contact-list {
   font-size: 1.125rem;
   line-height: 2.5; }

@@ -44,7 +44,7 @@ $container = get_theme_mod( 'understrap_container_type' );
     </div>
   </div>
   <div class="main-section ">
-    <div class="layout">
+    <div class="layout no-overflow">
       <div class="layout__col1 ">
       </div>
       <div class="layout__col2 border-left hidden-xs-border-left container ">
@@ -81,9 +81,13 @@ $container = get_theme_mod( 'understrap_container_type' );
             </div>
           </div>
           </div>
+          <div class="col-md-2 hidden-sm-down">
+             <div class="nw_anim_01 hidden-sm-down" id="anim01"></div>
+          </div>
         </div>
       </div>
-      <div class="layout__col3 ">
+      <div class="layout__col3">
+<div class="nw_anim_line hidden-sm-down"></div>
       </div>
     </div>
   </div>

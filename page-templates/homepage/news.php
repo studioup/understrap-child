@@ -54,6 +54,7 @@
   <div class="layout__col1">
   </div>
   <div class="layout__col2 container border-right hidden-xs-border-right">
+    <div class="anim_06" id="anim06"></div>
     <div class="row no-gutters">
       <div class="border-top border-left xs-border-right col-sm-1 offset-sm-11">
         <div class="go-top">
