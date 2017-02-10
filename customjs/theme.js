@@ -326,6 +326,19 @@ THEME.company = {
       a.manageSlider(elem);
       jQuery('.js-line').on("mouseenter",function(){
         a.manageSlider(jQuery(this));
+        var num = jQuery(this).data("num");
+        jQuery('.js-mobile-history-slider').slick('slickGoTo',num);
+      });
+      jQuery('.js-mobile-history-slider').slick({
+        arrows: false,
+        adaptiveHeight: true,
+        dots: true
+      });
+      jQuery('.js-mobile-history-slider').on('afterChange', function(event, slick, currentSlide){
+        if (jQuery(window).width()<768){
+          var num = jQuery(slick.$slides[currentSlide]).data("num");
+          a.manageSlider(jQuery('.js-line[data-num="'+num+'"]'));
+        }
       });
   },
   manageSlider: function(elem){

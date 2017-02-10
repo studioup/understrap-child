@@ -96,14 +96,21 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                         // check if the repeater field has rows of data
                         if( have_rows('history') ):
+                          $d=0;
                           $c=0;
                           // loop through the rows of data
                             while ( have_rows('history') ) : the_row();
                                 $hasYear = get_sub_field('year') != "";
+                                $dataNum="";
+                                if ($hasYear) {
+                                  $dataNum='data-num="'.$d.'"';
+                                }
                                 ?>
-                                <div data-text="<?php the_sub_field('text') ?>" class="js-line history__line-item history__line-item--<?php echo $c ?> <?php  if ($c%2) { echo "small"; } ?> <?php  if (!$hasYear) { echo "inactive-item"; } ?>"><span class="year"><?php the_sub_field('year') ?></span></div>
+                                <div <?php echo $dataNum ?> data-text="<?php the_sub_field('text') ?>" class="js-line history__line-item history__line-item--<?php echo $c ?> <?php  if ($c%2) { echo "small"; } ?> <?php  if (!$hasYear) { echo "inactive-item"; } ?>"><span class="year"><?php the_sub_field('year') ?></span></div>
                                 <?php
-
+                                if ($hasYear){
+                                  $d++;
+                                }
                                 $c++;
                             endwhile;
 
@@ -119,8 +126,36 @@ $container = get_theme_mod( 'understrap_container_type' );
                         <img src="<?php echo get_stylesheet_directory_uri() . '/img/arrow.svg'; ?>" />
                       </div>
                     </div>
-                    <div class="history__label js-history-label">
+                    <div class="history__label js-history-label hidden-sm-down">
 
+                    </div>
+                    <div class="history__mobile-slider js-mobile-history-slider hidden-md-up">
+                      <?php
+
+                      // check if the repeater field has rows of data
+                      if( have_rows('history') ):
+                        $c=0;
+                        // loop through the rows of data
+                          while ( have_rows('history') ) : the_row();
+
+                            if (get_sub_field('year')!=""){
+                              ?>
+                              <div data-num="<?php echo $c ?>" class="history__mobile-slider-item">
+                                <?php the_sub_field('text') ?>
+                              </div>
+                              <?php
+                              $c++;
+                              }
+                            
+                          endwhile;
+
+                      else :
+
+                          // no rows found
+
+                      endif;
+
+                      ?>
                     </div>
                   </div>
                 </div>

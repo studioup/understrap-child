@@ -17,6 +17,36 @@
     }
   }
 
+  .history__mobile-slider {
+    position: relative;
+    &:after {
+      position:absolute;
+      width:rem-calc(47px);
+      height: 100%;
+      display: block;
+      content: ' ';
+      left:0;
+      border: 1px solid #869D96;
+      border-right:0;
+      top: 0;
+    }
+    &:before {
+      position:absolute;
+      width:rem-calc(47px);
+      height: 100%;
+      display: block;
+      content: ' ';
+      right:0;
+      border: 1px solid #869D96;
+      border-left:0;
+      top: 0;
+    }
+    .history__mobile-slider-item {
+      padding:20px;
+      text-align: center;
+    }
+  }
+
   .history__label {
     position: relative;
     transition: 0.3s ease-in-out width;
@@ -96,9 +126,8 @@
           position: absolute;
           font-size: rem-calc(14px);
           top: rem-calc(-20px);
-          left: 0;
-          width: 100%;
-          text-align: center;
+          transform: translateX(-50%);
+          left: 50%;
           transition: 0.3s ease-in-out all;
         }
     }
