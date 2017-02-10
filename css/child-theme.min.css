@@ -10766,10 +10766,19 @@ footer .footer-list {
 
 .locations .locations__slider {
   height: 100%; }
+  @media (max-width: 575px) {
+    .locations .locations__slider {
+      height: auto; } }
   .locations .locations__slider .slick-list {
     height: 100%; }
+    @media (max-width: 575px) {
+      .locations .locations__slider .slick-list {
+        height: auto; } }
   .locations .locations__slider .slick-track {
     height: 100%; }
+    @media (max-width: 575px) {
+      .locations .locations__slider .slick-track {
+        height: auto; } }
   .locations .locations__slider .location__detail h4 {
     color: #d9534f; }
   .locations .locations__slider .location__detail .location__contacts {

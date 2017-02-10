@@ -363,6 +363,7 @@ THEME.company = {
       });
       jQuery('.js-location-slider').slick({
         arrows: false,
+        adaptiveHeight: true,
         dots: false
       });
     }

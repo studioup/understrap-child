@@ -70,11 +70,20 @@
 
   .locations__slider {
     height:100%;
+    @include media-breakpoint-down(xs) {
+      height: auto;
+    }
     .slick-list {
       height: 100%;
+      @include media-breakpoint-down(xs) {
+        height: auto;
+      }
     }
     .slick-track {
       height: 100%;
+      @include media-breakpoint-down(xs) {
+        height: auto;
+      }
     }
     .location__detail {
       h4 {
