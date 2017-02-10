@@ -99,13 +99,13 @@ $container = get_theme_mod( 'understrap_container_type' );
       <div class="layout__col2 container ">
         <div class="row no-gutters">
           <div class="col-md-9 border-right hidden-xs-border-right">
-            <div class="pl-md-6">
+            <div class="pl-lg-6">
               <div class="contacts__form ">
                 <?php the_field('form_content') ?>
               </div>
             </div>
           </div>
-          <div class="col-md-3 hidden-md-down border-top background-dotted-red">
+          <div class="col-md-3 hidden-sm-down border-top background-dotted-red">
 
           </div>
         </div>

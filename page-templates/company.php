@@ -146,7 +146,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                               <?php
                               $c++;
                               }
-                            
+
                           endwhile;
 
                       else :
@@ -373,7 +373,7 @@ $container = get_theme_mod( 'understrap_container_type' );
           <div class="row no-gutters">
             <div class="border-top border-left xs-border-right col-md-1 offset-md-11 col-sm-2 offset-sm-10">
               <div class="go-top">
-                <a href="#">⇡ Top</a>
+                <a href="#" class="js-totop">⇡ Top</a>
               </div>
             </div>
           </div>

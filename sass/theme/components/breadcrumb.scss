@@ -14,3 +14,10 @@
     }
   }
 }
+
+.search_result {
+  font-family: $alt-font;
+  @include media-breakpoint-down(xs) {
+    font-size: rem-calc(12px);
+  }
+}

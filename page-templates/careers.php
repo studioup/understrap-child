@@ -110,7 +110,7 @@ $container = get_theme_mod( 'understrap_container_type' );
               </div>
             </div>
           </div>
-          <div class="col-md-2 col-sm-3 border-right">
+          <div class="col-md-2 col-sm-3 border-right hidden-xs-down">
             <div class="cr_anim_01" id="anim01"></div>
           </div>
         </div>

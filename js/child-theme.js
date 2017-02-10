@@ -21454,7 +21454,14 @@ var THEME = {
 			this.currentPageInit();
       this.initMenu();
       this.initMobileMenu();
+      this.initToTop();
       //this.manageCookie();
+    },
+    initToTop: function(){
+        jQuery('.js-totop').on("click",function(e){
+          e.preventDefault();
+          jQuery("html, body").animate({"scrollTop": "0px"}, 200);
+        });
     },
     currentPageInit: function() {
 				THEME.$currentPageContentWrapper = jQuery(".js-page").eq(0);
@@ -21951,6 +21958,16 @@ THEME.contacts = {
   }
 };
 
+THEME.taxonomy_archive = {
+  init: function(){
+    this.manageBreadcrumb();
+  },
+  manageBreadcrumb: function(){
+    var link = jQuery('.js-link').last().attr("href");
+    jQuery('.js-linkback').attr("href",link);
+  }
+
+};
 
 THEME.news = {
   animOffset: 150,

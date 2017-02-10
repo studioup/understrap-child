@@ -9533,7 +9533,10 @@ aside.widget {
     border: 1px solid #2778AA;
     padding: 1.375rem;
     outline-width: 0;
-    border-bottom: 0; }
+    border-bottom: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; }
     @media (max-width: 575px) {
       .form-field input {
         border-bottom: 1px solid #2778AA; } }
@@ -10152,6 +10155,12 @@ h4, .h4 {
     color: black; }
   .breadcrumb .breadcrumb-item:first-child:before {
     content: '——— '; }
+
+.search_result {
+  font-family: "Lekton", sans-serif; }
+  @media (max-width: 575px) {
+    .search_result {
+      font-size: 0.75rem; } }
 
 @media (max-width: 575px) {
   .company__slider .company__slider-item {

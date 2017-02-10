@@ -17,17 +17,17 @@ $container = get_theme_mod( 'understrap_container_type' );
       <div class="col-sm-12 col-lg-11 border-right hidden-xs-border-right">
 
         <ol class="breadcrumb pl-sm-6 mt-sm-5 mt-3">
-          <li class="breadcrumb-item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
-          <li class="breadcrumb-item"><a href="<?php echo get_post_type_archive_link( 'product' ); ?>">Products</a></li>
+          <li class="breadcrumb-item"><a class="js-link" href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
+          <li class="breadcrumb-item"><a class="js-link" href="<?php echo get_post_type_archive_link( 'product' ); ?>">Products</a></li>
             <?php if ($currentTerm->parent!=0) {
               $parentTerm = get_term( $currentTerm->parent, $currentTaxonomy );
               ?>
-              <li class="breadcrumb-item"><a href="<?php echo get_term_link( $parentTerm ); ?>"><?php echo $parentTerm->name ?></a></li>
+              <li class="breadcrumb-item"><a class="js-link" href="<?php echo get_term_link( $parentTerm ); ?>"><?php echo $parentTerm->name ?></a></li>
             <?php } ?>
           <li class="breadcrumb-item"><?php echo single_term_title(); ?></li>
         </ol>
 
-        <h1 class="h2 mt-sm-4 mt-2 gradient-blue"><?php echo single_term_title(); ?></h1>
+        <h1 class="h2 mt-sm-4 mt-2 mb-4 gradient-blue"><?php echo single_term_title(); ?></h1>
       </div>
     </div>
     </div>
@@ -109,12 +109,12 @@ foreach ($terms as &$term) {
 }else{
 
 ?>
-<div class="layout mt-5">
+<div class="layout">
   <div class="layout__col1 <?php if ($c==0) echo "border-top" ?>">
   </div>
   <div class="layout__col2 container">
   <div class="row  no-gutters">
-    <div class="col-sm-11 border-right hidden-xs-border-right">
+    <div class="col-sm-12 col-lg-11 border-right hidden-xs-border-right">
       <div class="row">
         <div class="col-sm-11 col-lg-10">
           <div class="row">
@@ -161,7 +161,7 @@ foreach ($terms as &$term) {
     <div class="row no-gutters">
       <div class="border-left xs-border-top xs-border-right col-lg-1 offset-lg-11 col-sm-2 offset-sm-10">
         <div class="go-top">
-          <a href="#">⇠ Back</a>
+          <a href="#" class="js-linkback">⇠ Back</a>
         </div>
       </div>
     </div>

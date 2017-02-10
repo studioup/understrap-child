@@ -119,7 +119,7 @@ by innovation</h1>
         <div class="row no-gutters">
           <div class="border-left border-top xs-border-right col-lg-1 offset-lg-11 col-sm-2 offset-sm-10">
             <div class="go-top">
-              <a href="#">⇠ Back</a>
+              <a href="<?php echo get_home_url(); ?>">⇠ Back</a>
             </div>
           </div>
         </div>
