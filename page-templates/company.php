@@ -88,51 +88,39 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <div class="col-sm-11 offset-sm-1">
                   <div class="history mb-6">
                     <div class="history__line mt-4 mb-3">
-                      <svg width="807px" height="61px" viewBox="0 0 807 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                          <defs>
-                              <polygon id="path-1" points="37.2158145 4.28928518 37.2158145 21.0670055 20.5409147 21.0670055"></polygon>
-                              <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="16.6748998" height="16.7777203" fill="white">
-                                  <use xlink:href="#path-1"></use>
-                              </mask>
-                              <polygon id="path-3" points="37.9149444 810.923867 37.9149444 827.701588 21.2400446 827.701588"></polygon>
-                              <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="16.6748998" height="16.7777203" fill="white">
-                                  <use xlink:href="#path-3"></use>
-                              </mask>
-                          </defs>
-                          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                              <g id="ABXXXX_mockup_COMPANY" transform="translate(-317.000000, -883.000000)" stroke="#869D96">
-                                  <g id="Timeline" transform="translate(304.000000, 857.000000)">
-                                      <g id="Fisarmonica" transform="translate(416.521245, 56.667692) rotate(-270.000000) translate(-416.521245, -56.667692) translate(387.021245, -359.332308)">
-                                          <path d="M-3.51718654e-13,61.5 L58.9179793,61.5" id="Line-Copy-28" class="history__path-year" data-year="2014" stroke-linecap="square"></path>
-                                          <path d="M-5.32907052e-14,136.5 L58.9179793,136.5" id="Line-Copy-29" stroke-linecap="square"></path>
-                                          <path d="M-3.90798505e-14,211.5 L58.9179793,211.5" id="Line-Copy-30" stroke-linecap="square"></path>
-                                          <path d="M-2.48689958e-14,285.5 L58.9179793,285.5" id="Line-Copy-31" stroke-linecap="square"></path>
-                                          <path d="M-1.0658141e-14,360.5 L58.9179793,360.5" id="Line-Copy-32" stroke-linecap="square"></path>
-                                          <path d="M0,434.5 L58.9179793,434.5" id="Line-Copy-41" stroke-linecap="square"></path>
-                                          <path d="M4.50341986e-11,509.5 L58.9179793,509.5" id="Line-Copy-46" stroke-linecap="square"></path>
-                                          <path d="M13.3399198,548.5 L46.6897194,548.5" id="Line-Copy-33" stroke-linecap="square"></path>
-                                          <path d="M13.3399198,473.5 L46.6897194,473.5" id="Line-Copy-38" stroke-linecap="square"></path>
-                                          <path d="M13.3399198,398.5 L46.6897194,398.5" id="Line-Copy-40" stroke-linecap="square"></path>
-                                          <path d="M13.3399198,323.5 L46.6897194,323.5" id="Line-Copy-45" stroke-linecap="square"></path>
-                                          <path d="M13.3399198,248.5 L46.6897194,248.5" id="Line-Copy-47" stroke-linecap="square"></path>
-                                          <path d="M13.3399198,173.5 L46.6897194,173.5" id="Line-Copy-49" stroke-linecap="square"></path>
-                                          <path d="M13.3399198,99.5 L46.6897194,99.5" id="Line-Copy-51" stroke-linecap="square"></path>
-                                          <path d="M13.3399198,733.5 L46.6897194,733.5" id="Line-Copy-36" stroke-linecap="square"></path>
-                                          <path d="M21.1215397,695.25 L37.7964395,695.25" id="Line-Copy-35" stroke-width="0.5" stroke-linecap="square"></path>
-                                          <path d="M21.1215397,658.25 L37.7964395,658.25" id="Line-Copy-42" stroke-width="0.5" stroke-linecap="square"></path>
-                                          <path d="M21.1215397,621.25 L37.7964395,621.25" id="Line-Copy-43" stroke-width="0.5" stroke-linecap="square"></path>
-                                          <path d="M21.1215397,584.25 L37.7964395,584.25" id="Line-Copy-44" stroke-width="0.5" stroke-linecap="square"></path>
-                                          <path d="M9.23705556e-14,769.5 L58.92,769.5" id="Line-Copy-37" stroke-linecap="square"></path>
-                                          <use id="Rectangle-5-Copy-2" mask="url(#mask-2)" stroke-width="4" transform="translate(28.878365, 12.678145) rotate(-315.000000) translate(-28.878365, -12.678145) " xlink:href="#path-1"></use>
-                                          <use id="Rectangle-5-Copy" mask="url(#mask-4)" stroke-width="4" transform="translate(29.577495, 819.312728) rotate(-135.000000) translate(-29.577495, -819.312728) " xlink:href="#path-3"></use>
-                                      </g>
-                                  </g>
-                              </g>
-                          </g>
-                      </svg>
+                      <div class="history__arrow history__arrow--left">
+                        <img src="<?php echo get_stylesheet_directory_uri() . '/img/arrow.svg'; ?>" />
+                      </div>
+                      <div class="history__line-container">
+                        <?php
+
+                        // check if the repeater field has rows of data
+                        if( have_rows('history') ):
+                          $c=0;
+                          // loop through the rows of data
+                            while ( have_rows('history') ) : the_row();
+                                $hasYear = get_sub_field('year') != "";
+                                ?>
+                                <div data-text="<?php the_sub_field('text') ?>" class="js-line history__line-item history__line-item--<?php echo $c ?> <?php  if ($c%2) { echo "small"; } ?> <?php  if (!$hasYear) { echo "inactive-item"; } ?>"><span class="year"><?php the_sub_field('year') ?></span></div>
+                                <?php
+
+                                $c++;
+                            endwhile;
+
+                        else :
+
+                            // no rows found
+
+                        endif;
+
+                        ?>
+                      </div>
+                      <div class="history__arrow history__arrow--right">
+                        <img src="<?php echo get_stylesheet_directory_uri() . '/img/arrow.svg'; ?>" />
+                      </div>
                     </div>
-                    <div class="history__label">
-                      Set up PEC TECHNOLOGY CO., LTD
+                    <div class="history__label js-history-label">
+
                     </div>
                   </div>
                 </div>
@@ -180,16 +168,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                   // check if the repeater field has rows of data
                   if( have_rows('locations') ):
-
+                      $c=0;
                    	// loop through the rows of data
                       while ( have_rows('locations') ) : the_row();
 
                           ?>
-                          <div class="locations__pointer" style="left: <?php the_sub_field('left_coordinate') ?>%; top: <?php the_sub_field('top_coordinate') ?>%">
+                          <div class="locations__pointer js-location-pointer" data-num="<?php echo $c ?>" style="left: <?php the_sub_field('left_coordinate') ?>%; top: <?php the_sub_field('top_coordinate') ?>%">
                             <span class="locations__pointer-inside"></span>
                           </div>
                           <?php
-
+                          $c++;
 
                       endwhile;
 
