@@ -10043,18 +10043,18 @@ h4, .h4 {
         height: auto;
         padding: 0.9375rem 1.25rem; } }
   .navbar .navbar-alt .menu-item:hover .icon__world > g {
-    fill: #0275d8;
+    fill: #2778AA;
     stroke: white; }
     .navbar .navbar-alt .menu-item:hover .icon__world > g g {
       stroke: white; }
     .navbar .navbar-alt .menu-item:hover .icon__world > g path {
       stroke: white; }
   .navbar .navbar-alt .menu-item:hover .icon__search > g {
-    fill: #0275d8; }
+    fill: #2778AA; }
     .navbar .navbar-alt .menu-item:hover .icon__search > g > g {
       stroke: white; }
   .navbar .navbar-alt .menu-item:hover .icon__lock > g {
-    fill: #0275d8; }
+    fill: #2778AA; }
     .navbar .navbar-alt .menu-item:hover .icon__lock > g > g {
       stroke: white; }
   .navbar .navbar-alt svg {
