@@ -50,7 +50,7 @@ by innovation</h1>
                      <?php foreach($termSplitted as &$term ){ ?>
                        <div class="col-sm-4">
                        <article class="category-loop " id="post-<?php the_ID(); ?>">
-                         <div class="category-loop__image background-dotted-red">
+                         <div class="category-loop__image background-pattern-red">
                            <a href="<?php echo get_term_link( $term ); ?>">
                              <?php echo wp_get_attachment_image( get_field('image', $term) , 'thumbnail'); ?>
                            </a>
@@ -85,7 +85,7 @@ by innovation</h1>
                     <?php foreach($termSplitted as &$term ){ ?>
                       <div class="col-sm-4">
                       <article class="category-loop " id="post-<?php the_ID(); ?>">
-                        <div class="category-loop__image background-dotted-red">
+                        <div class="category-loop__image background-pattern-red">
                           <a href="<?php echo get_term_link( $term ); ?>">
                             <?php echo wp_get_attachment_image( get_field('image', $term) , 'thumbnail'); ?>
                           </a>

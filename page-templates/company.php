@@ -56,12 +56,12 @@ $container = get_theme_mod( 'understrap_container_type' );
             <div class="pt-4"></div>
           </div>
           <div class="col-lg-2 col-sm-1">
-            <div class="pt-4 background-dotted-red xs-border-left xs-border-right border-bottom"></div>
+            <div class="pt-4 background-pattern-red xs-border-left xs-border-right border-bottom"></div>
           </div>
         </div>
       </div>
       <div class="layout__col3 border-top">
-            <div class="pt-4 background-dotted-red border-bottom"></div>
+            <div class="pt-4 background-pattern-red border-bottom"></div>
       </div>
     </div>
   </div>
@@ -196,7 +196,7 @@ $container = get_theme_mod( 'understrap_container_type' );
       <div class="layout__col2 border-top border-left hidden-xs-border-top hidden-xs-border-left hidden-xs-border-right border-right container ">
         <div class="locations">
           <div class="row no-gutters">
-            <div class="col-md-8 background-dotted-red xs-border-top xs-border-left xs-border-right">
+            <div class="col-md-8 background-pattern-red xs-border-top xs-border-left xs-border-right">
               <div class="locations__world">
                 <div class="locations__world-image">
                   <?php
@@ -319,7 +319,7 @@ $container = get_theme_mod( 'understrap_container_type' );
               <div class="pt-4"></div>
             </div>
             <div class="col-sm-4 border-bottom border-left">
-              <div class="pt-7 background-dotted-red  xs-border-right"></div>
+              <div class="pt-7 background-pattern-red  xs-border-right"></div>
             </div>
           </div>
         </div>

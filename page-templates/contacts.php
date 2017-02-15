@@ -105,12 +105,12 @@ $container = get_theme_mod( 'understrap_container_type' );
               </div>
             </div>
           </div>
-          <div class="col-md-3 hidden-sm-down border-top background-dotted-red">
+          <div class="col-md-3 hidden-sm-down border-top background-pattern-red">
 
           </div>
         </div>
       </div>
-      <div class="layout__col3 border-top background-dotted-red">
+      <div class="layout__col3 border-top background-pattern-red">
       </div>
     </div>
     <div class="layout hidden-xs-down">
@@ -136,7 +136,7 @@ $container = get_theme_mod( 'understrap_container_type' );
           <div class="col-sm-9 border-top border-right ">
           </div>
           <div class="col-sm-2 border-right border-top">
-            <div class="pt-3 background-dotted-red border-bottom"></div>
+            <div class="pt-3 background-pattern-red border-bottom"></div>
           </div>
           <div class="col-sm-1 border-bottom">
           </div>

@@ -37,7 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<li><a href="#">Lorem Ipsum</a></li>
 						</ul>
 					</div>
-					<div class="col-lg-4 offset-lg-2 col-sm-5 background-dotted-red border-left hidden-xs-border-left">
+					<div class="col-lg-4 offset-lg-2 col-sm-5 background-pattern-red border-left hidden-xs-border-left">
 						<div class="pl-5 pr-5 pt-5 pb-5">
 							<h4>Info & Support</h4>
 							<a href="<?php echo get_permalink( get_page_by_path( 'contacts-support' ) ); ?>" class="mt-2 btn btn-secondary">Contact Now</a>
@@ -66,7 +66,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<li><a href="#">by Studio Up</a></li>
 						</ul>
 					</div>
-					<div class="col-lg-4 col-sm-5 background-dotted-red border-left hidden-xs-down">
+					<div class="col-lg-4 col-sm-5 background-pattern-red border-left hidden-xs-down">
 						<div class="pt-2">
 						</div>
 					</div>

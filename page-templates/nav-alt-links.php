@@ -62,10 +62,10 @@
     </a>
     <div class="dropdown-menu dropdown-menu-right" role="menu">
       <div class="nav__login">
-        <div class="nav__login-section nav__search-input-container background-dotted-red">
+        <div class="nav__login-section nav__search-input-container background-pattern-red">
           <input type="text" placeholder="Username" name="username" class="form-control nav__search-input"/>
         </div>
-        <div class="nav__login-section nav__search-input-container background-dotted-red" >
+        <div class="nav__login-section nav__search-input-container background-pattern-red" >
           <input type="text" placeholder="Password" name="password" class="form-control nav__search-input"/>
         </div>
         <div class="nav__login-section">

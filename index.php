@@ -34,12 +34,12 @@ $container = get_theme_mod( 'understrap_container_type' );
             <div class="pt-4"></div>
           </div>
           <div class="col-sm-2">
-            <div class="pt-4 background-dotted-red border-bottom"></div>
+            <div class="pt-4 background-pattern-red border-bottom"></div>
           </div>
         </div>
       </div>
       <div class="layout__col3 border-top">
-            <div class="pt-4 background-dotted-red border-bottom"></div>
+            <div class="pt-4 background-pattern-red border-bottom"></div>
       </div>
     </div>
   </div>

@@ -34,7 +34,7 @@ $terms = get_terms( array(
       <div class="col-lg-5 offset-lg-1 col-md-5 align-self-end">
         <div class="products-slider border-left border-top xs-border-right js-product-slider">
           <?php foreach($terms as &$term ){ ?>
-            <div class="products-slider__item background-dotted-red">
+            <div class="products-slider__item background-pattern-red">
                 <div class="products-slider__image">
                   <?php echo wp_get_attachment_image( get_field('image', $term) , 'medium'); ?>
                 </div>
@@ -66,7 +66,7 @@ $terms = get_terms( array(
   <div class="layout__col2 container border-right hidden-xs-border-right">
     <div class="row">
       <div class="col-sm-5 offset-sm-7">
-        <div class="pt-5 background-dotted-red border-left border-bottom xs-border-right"></div>
+        <div class="pt-5 background-pattern-red border-left border-bottom xs-border-right"></div>
       </div>
     </div>
   </div>

@@ -21554,7 +21554,8 @@ THEME.homepage = {
         jQuery('.js-company-slider').slick({
           vertical: true,
           verticalSwiping: true,
-          arrows: false,
+          arrows: true,
+          infinite: false,
           autoplay: true,
           autoplaySpeed: 4000,
           speed: 1000,
@@ -21564,6 +21565,7 @@ THEME.homepage = {
               breakpoint: 575,
               settings: {
                 vertical: false,
+                arrows: false,
                 verticalSwiping: false
               }
             }]
@@ -21603,7 +21605,6 @@ THEME.homepage = {
           jQuery(".js-counter").addClass("position-"+nextSlide);
         });
         jQuery('.js-product-slider').on('afterChange', function(event, slick, currentSlide){
-          console.log(currentSlide);
           var address = jQuery('.js-slider-link[data-num="'+currentSlide+'"]').data("url");
           jQuery(".products-slider__link a").attr("href",address);
         });

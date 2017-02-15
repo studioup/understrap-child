@@ -33,12 +33,12 @@
 </div>
 <div class="layout">
   <div class="layout__col1 ">
-    <div class="border-right pt-4 background-dotted-red"></div>
+    <div class="border-right pt-4 background-pattern-red"></div>
   </div>
   <div class="layout__col2 container border-right hidden-xs-border-right">
     <div class="row no-gutters">
       <div class="col-sm-2 offset-sm-10">
-        <div class="pt-4 background-dotted-red border-left border-bottom xs-border-right"></div>
+        <div class="pt-4 background-pattern-red border-left border-bottom xs-border-right"></div>
       </div>
     </div>
   </div>
@@ -46,7 +46,7 @@
   </div>
 </div>
 <div class="layout  no-overflow">
-  <div class="layout__col1 border-right border-bottom background-dotted-red">
+  <div class="layout__col1 border-right border-bottom background-pattern-red">
 
   </div>
   <div class="layout__col2 container border-bottom">

@@ -1,9 +1,16 @@
 .company__slider {
 
-  .company__slider-item {
+  .company__slider-content {
     @include media-breakpoint-down(xs){
       padding-left:rem-calc(15px);
       padding-right:rem-calc(15px);
+    }
+    div {
+      opacity: 0;
+      transition: 0.5s ease opacity;
+    }
+    &.slick-current div {
+      opacity: 1;
     }
   }
   .slick-dots li:nth-child(1) button:before {content: ' ';width: 14px;height: 14px;border-radius: 100%;border: 1px solid #869D96;opacity: 1;}
@@ -11,12 +18,47 @@
   .slick-dots li:nth-child(3) button:before {content: ' ';width: 14px;height: 14px;border: 1px solid #869D96;opacity: 1;}
   .slick-dots li.slick-active button:before { background: #869D96; }
 
+  .slick-prev {
+      &:before {
+        font: normal normal normal 19px/1 FontAwesome;
+        content: "\f106";
+        color:$green;
+      }
+      left: 2px;
+      bottom: 113px;
+      top: inherit;
+      transform: inherit;
+      @include media-breakpoint-up(lg) {
+        left: rem-calc(-59px);
+      }
+  }
+
+  .slick-next {
+      &:before {
+        font: normal normal normal 19px/1 FontAwesome;
+        content: "\f107";
+        color:$green;
+      }
+      right: inherit;
+      top: inherit;
+      bottom: 0px;
+      left: 2px;
+      transform: inherit;
+      @include media-breakpoint-up(lg) {
+        left: rem-calc(-59px);
+      }
+  }
 
   .slick-dots {
-    bottom: 0;
+    bottom: rem-calc(-10px);
+
     @include media-breakpoint-up(sm) {
-      bottom: 0;
+      bottom: rem-calc(30px);
+
       width: rem-calc(30px);
+    }
+    @include media-breakpoint-up(lg) {
+      left: rem-calc(-60px);
     }
   }
 }

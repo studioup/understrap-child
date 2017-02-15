@@ -9,7 +9,7 @@
 
 <article class="product-loop" id="post-<?php the_ID(); ?>">
 
-  <div class="product-loop__image background-dotted-red">
+  <div class="product-loop__image background-pattern-red">
     <a href="<?php the_permalink() ?>">
     	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
     </a>

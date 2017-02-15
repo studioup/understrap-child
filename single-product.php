@@ -38,7 +38,7 @@ $terms = get_the_terms(get_the_ID(),"products-category");
           <div class="col-sm-5 align-self-end xs-border-right xs-border-bottom mt-5 mt-sm-0">
             <div class="row no-gutters">
               <div class="col-sm-12 border-left border-top border-bottom ">
-                <div class="product__image  background-dotted-red text-center p-4">
+                <div class="product__image  background-pattern-red text-center p-4">
                   <?php the_post_thumbnail() ?>
                 </div>
               </div>
@@ -89,7 +89,7 @@ $terms = get_the_terms(get_the_ID(),"products-category");
 
 
     </div>
-    <div class="layout__col3 background-dotted-red">
+    <div class="layout__col3 background-pattern-red">
     </div>
   </div>
 </div>

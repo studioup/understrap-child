@@ -152,7 +152,7 @@ $container = get_theme_mod( 'understrap_container_type' );
               </div>
             </div>
           </div>
-          <div class="col-sm-2 hidden-sm-down border-right border-top background-dotted-red">
+          <div class="col-sm-2 hidden-sm-down border-right border-top background-pattern-red">
 
           </div>
         </div>
