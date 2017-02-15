@@ -56,7 +56,7 @@ by innovation</h1>
                            </a>
                          </div>
                          <div class="category-loop__name border-top">
-                          <h5> <a href="<?php echo get_term_link( $term ); ?>"><?php echo $term->name ?></a></h5>
+                          <h6> <a href="<?php echo get_term_link( $term ); ?>"><?php echo $term->name ?></a></h6>
                          </div>
                        </article><!-- #post-## -->
                        </div>
@@ -91,7 +91,7 @@ by innovation</h1>
                           </a>
                         </div>
                         <div class="category-loop__name border-top">
-                         <h5> <a href="<?php echo get_term_link( $term ); ?>"><?php echo $term->name ?></a></h5>
+                         <h6> <a href="<?php echo get_term_link( $term ); ?>"><?php echo $term->name ?></a></h6>
                         </div>
                       </article><!-- #post-## -->
                       </div>

@@ -79,11 +79,11 @@ $container = get_theme_mod( 'understrap_container_type' );
                                ?>
                                <div class="card careers-list__item">
                                 <div class="card-header careers-list__header" role="tab" id="headingOne">
-                                  <h5 class="mb-0">
+                                  <h6 class="mb-0">
                                     <a data-toggle="collapse" class="js-position" data-parent="#accordion" href="#collapse<?php echo $c ?>" aria-expanded="true" aria-controls="collapse<?php echo $c ?>">
                                       <?php the_sub_field('position_name'); ?>
                                     </a>
-                                  </h5>
+                                  </h6>
                                 </div>
 
                                 <div id="collapse<?php echo $c ?>" class="collapse " role="tabpanel" aria-labelledby="heading<?php echo $c ?>">
@@ -128,8 +128,8 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="row no-gutters">
           <div class="col-sm-9 border-right hidden-xs-border-right">
             <div class="pl-sm-6 mt-md-6 mt-3 mb-6">
-              <h3 class="pl-6 ">—— <?php the_field('form_section_title') ?></h3>
-              <h2 class="gradient-blue pl-0 col-sm-9"><?php the_field('form_title') ?></h2>
+              <h5 class="pl-6 ">—— <?php the_field('form_section_title') ?></h5>
+              <h2 class="gradient-blue pl-0 mt-3 col-sm-9"><?php the_field('form_title') ?></h2>
             </div>
           </div>
           <div class="col-md-2 col-sm-3 border-right hidden-xs-border-right">

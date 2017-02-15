@@ -75,10 +75,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
               <div class="row">
                 <div class="col-sm-6 offset-sm-1">
-                  <h3 class="pl-6 mt-4">
-                    — <?php the_field('history_section_title') ?>
-                  </h3>
-                  <h2 class="gradient-blue">
+                  <h5 class="pl-6 mt-4">
+                    —— <?php the_field('history_section_title') ?>
+                  </h5>
+                  <h2 class="mt-3 gradient-blue">
                     <?php the_field('history_title') ?>
                   </h2>
 
@@ -164,10 +164,10 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <div class="col-sm-11 offset-sm-1">
                   <div class="row">
                     <div class="col-sm-6">
-                      <h3 class="pl-6 ">
-                        — <?php the_field('mission_section_title') ?>
-                      </h3>
-                      <h2 class="gradient-blue">
+                      <h5 class="pl-6 ">
+                        —— <?php the_field('mission_section_title') ?>
+                      </h5>
+                      <h2 class="mt-3 gradient-blue">
                         <?php the_field('mission_title') ?>
                       </h2>
                     </div>
@@ -341,10 +341,10 @@ $container = get_theme_mod( 'understrap_container_type' );
                 </div>
                 <div class="row">
                   <div class="col-8 offset-2">
-                    <h3 class="pl-6 ">
-                      — <?php the_field('sub_section_title') ?>
-                    </h3>
-                    <h2 class="gradient-blue">
+                    <h5 class="pl-6 ">
+                      —— <?php the_field('sub_section_title') ?>
+                    </h5>
+                    <h2 class="mt-3 gradient-blue">
                       <?php the_field('sub_title') ?>
                     </h2>
                     <div class="pl-6 font-big mt-3">

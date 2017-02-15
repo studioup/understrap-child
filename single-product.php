@@ -26,9 +26,9 @@ $terms = get_the_terms(get_the_ID(),"products-category");
         <div class="row no-gutters border-right hidden-xs-border-right">
           <div class="col-sm-7 pr-4">
             <h1 class="h2 gradient-blue mb-4 mt-3"><?php the_title(); ?></h1>
-            <h5 class="pl-md-6 mb-4">
+            <h6 class="pl-md-6 mb-4">
               Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.
-            </h5>
+            </h6>
             <div class="product__content">
               <?php the_content( 'Read more ...' ); ?>
 

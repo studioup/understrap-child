@@ -5,8 +5,8 @@
     <div class="row">
       <div class="col-lg-9 col-md-10 offset-sm-1">
         <div class="news-wrapper pt-7 pb-7">
-          <h3 class="pl-6">—— News</h3>
-          <h2 class="gradient-blue ">Latest from us</h2>
+          <h5 class="pl-6">—— News</h3>
+          <h2 class="gradient-blue mt-3 ">Latest from us</h2>
           <div class="news-list mb-4 mt-4 pl-6">
             <div class="row">
               <?php
@@ -23,7 +23,7 @@
                  <div class="col-sm-6">
                    <div class="news-list__item">
                      <a href="<?php the_permalink();?>">
-                       <h5><?php the_title(); ?></h5>
+                       <h6><?php the_title(); ?></h6>
                        <p><?php the_excerpt(); ?></p>
                      </a>
                    </div>

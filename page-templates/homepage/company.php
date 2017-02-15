@@ -18,9 +18,9 @@
                   <div class="company__slider-item pt-7 pb-7">
                     <div class="row">
                       <div class="col-sm-10 offset-sm-1">
-                        <h3 class="pl-6">——— <?php the_sub_field('section_title') ?></h3>
+                        <h5 class="pl-6">——— <?php the_sub_field('section_title') ?></h3>
                         <h2 class="mt-4 mb-4 gradient-blue"><?php the_sub_field('title') ?></h2>
-                        <p class="pl-6 font-big"><?php the_sub_field('content') ?></p>
+                        <div class="pl-6 font-big"><?php the_sub_field('content') ?></div>
                         <div class="text-right">
                           <a href="<?php the_sub_field('link') ?>" class="btn btn-secondary">Read more</a>
                         </div>

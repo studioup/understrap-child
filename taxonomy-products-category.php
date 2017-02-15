@@ -15,8 +15,9 @@ $container = get_theme_mod( 'understrap_container_type' );
     <div class="layout__col2 container ">
     <div class="row no-gutters">
       <div class="col-sm-12 col-lg-11 border-right hidden-xs-border-right">
-
-        <ol class="breadcrumb pl-sm-6 mt-sm-5 mt-3">
+        <div class="row">
+          <div class="col-md-11 offset-md-1">
+        <ol class="breadcrumb pl-0 offset-lg-1 mt-sm-5 mt-3">
           <li class="breadcrumb-item"><a class="js-link" href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
           <li class="breadcrumb-item"><a class="js-link" href="<?php echo get_post_type_archive_link( 'product' ); ?>">Products</a></li>
             <?php if ($currentTerm->parent!=0) {
@@ -26,8 +27,11 @@ $container = get_theme_mod( 'understrap_container_type' );
             <?php } ?>
           <li class="breadcrumb-item"><?php echo single_term_title(); ?></li>
         </ol>
-
-        <h1 class="h2 mt-sm-4 mt-2 mb-4 gradient-blue"><?php echo single_term_title(); ?></h1>
+        </div>
+        <div class="col-sm-12">
+        <h1 class="h2 mt-sm-4 mt-2 mb-1 gradient-blue"><?php echo single_term_title(); ?></h1>
+        </div>
+        </div>
       </div>
     </div>
     </div>
@@ -46,7 +50,7 @@ foreach ($terms as &$term) {
     <div class="layout__col2 container">
     <div class="row no-gutters">
       <div class="col-sm-12 col-lg-11 border-right hidden-xs-border-right">
-        <h3 class="pl-6 mt-sm-5 mt-3 mb-3 mb-sm-3" ><a href="<?php echo get_term_link( $term ); ?>">——— <?php echo $term->name ?></a></h3>
+        <h5 class="pl-0 offset-md-1 mt-sm-5 mt-3 mb-3 mb-sm-3 color-black" ><a href="<?php echo get_term_link( $term ); ?>">——— <?php echo $term->name ?></a></h3>
       </div>
     </div>
     </div>
@@ -59,8 +63,9 @@ foreach ($terms as &$term) {
     <div class="layout__col2 container">
     <div class="row  no-gutters">
       <div class="col-sm-12 col-lg-11 border-right hidden-xs-border-right">
-        <div class="row">
-          <div class="col-sm-11 col-lg-10">
+        <div class="row no-gutters" >
+          <div class="col-md-1 <?php if ($c==0) echo "border-top" ?> hidden-sm-down"></div>
+          <div class="col-sm-11 col-md-10">
             <div class="row">
             <?php
 
