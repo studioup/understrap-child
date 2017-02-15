@@ -13,11 +13,11 @@
               <div class="support__corner support__corner--rb">
                 <img src="<?php echo get_stylesheet_directory_uri() . '/img/corner.svg'; ?>" />
               </div>
-              <div class="support__grid">
+              <!--<div class="support__grid">
                 <img src="<?php echo get_stylesheet_directory_uri() . '/img/grid.svg'; ?>" />
-              </div>
+              </div>-->
               <div class="support__anim anim_02 hidden-xs-down" id="anim02"></div>
-              <h2 class="h1 text-primary pl-0 col-sm-11"><?php the_field('support_main_title') ?></h2>
+              <h2 class="h1 gradient-red pl-0 col-sm-11"><?php the_field('support_main_title') ?></h2>
               <h3 class="mt-3"><?php the_field('support_content') ?></h3>
               <a href="<?php the_field('support_link') ?>" class="btn btn-secondary mt-3">Get in touch</a>
             </div>

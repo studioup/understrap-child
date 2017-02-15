@@ -26,11 +26,11 @@ $container = get_theme_mod( 'understrap_container_type' );
               <div class="support__corner support__corner--rb">
                 <img src="<?php echo get_stylesheet_directory_uri() . '/img/corner.svg'; ?>" />
               </div>
-              <div class="support__grid">
+              <!--<div class="support__grid">
                 <img src="<?php echo get_stylesheet_directory_uri() . '/img/grid.svg'; ?>" />
-              </div>
+              </div>-->
               <div class="support__anim anim_02" id="anim02"></div>
-              <h2 class="h1 text-primary col-sm-10">— <?php the_field('main_title') ?></h2>
+              <h2 class="h1 gradient-red col-sm-10">— <?php the_field('main_title') ?></h2>
               <h3 class="mt-3 pl-6"><?php the_field('main_content') ?></h3>
 
             </div>
