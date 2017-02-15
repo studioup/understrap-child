@@ -11,7 +11,7 @@
     border-bottom: 1px solid $aqua;
     height: 50px;
     z-index: 1000;
-    
+
   }
   @include media-breakpoint-down(sm){
     .container {
@@ -63,18 +63,19 @@
         position: absolute;
         width: calc(100% - 40px);
         border: 0;
-        border-bottom: 2px solid $brand-primary;
+        border-bottom: 1px solid $brand-primary;
         opacity: 0;
         left: rem-calc(20px);
-        bottom: rem-calc(30px);
+        bottom: rem-calc(20px);
         display: block;
         margin: 0;
-        transition: 0.3s ease opacity;
+        transition: 0.3s ease all;
       }
     }
     &:hover, &:active {
       color: $aqua;
       &:before {
+        bottom: rem-calc(30px);
         opacity: 1;
       }
     }
@@ -91,6 +92,7 @@
     & > .nav-link {
       color: $aqua;
       &:before {
+        bottom: rem-calc(30px);
         opacity: 1;
       }
     }
@@ -116,7 +118,7 @@
       @include media-breakpoint-down(sm){
         line-height: rem-calc(30px);
         height: auto;
-        padding: rem-calc(15px) rem-calc(20px);        
+        padding: rem-calc(15px) rem-calc(20px);
       }
     }
   }
@@ -150,8 +152,44 @@
       @include media-breakpoint-down(sm){
         line-height: rem-calc(30px);
         height: auto;
-        padding: rem-calc(15px) rem-calc(20px);        
+        padding: rem-calc(15px) rem-calc(20px);
       }
+    }
+    .menu-item {
+
+      &:hover {
+        .icon__world {
+          & > g {
+            fill: $blue;
+            stroke: white;
+            g {
+              stroke: white;
+            }
+            path {
+              stroke: white;
+            }
+          }
+        }
+        .icon__search {
+          & > g {
+            fill: $blue;
+            & > g {
+              stroke: white;
+            }
+          }
+        }
+        .icon__lock {
+          & > g {
+            fill: $blue;
+            & > g {
+              stroke: white;
+            }
+          }
+        }
+      }
+    }
+    svg {
+      vertical-align: middle;
     }
   }
   .dropdown-menu {
@@ -159,7 +197,7 @@
     border-radius: 0;
     border-color: $aqua;
     padding: 0;
-    min-width: 12rem;
+    min-width: rem-calc(260px);
     margin-top: 0;
     box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
     @include media-breakpoint-down(sm){
@@ -311,6 +349,3 @@
         }
     }
 }
-
-
-

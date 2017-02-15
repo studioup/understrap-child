@@ -19,6 +19,16 @@
   }
 }
 
+.btn-sm {
+  padding: rem-calc(6px) rem-calc(8px) rem-calc(0px) rem-calc(8px);
+}
+
+.btn-info {
+  &:hover {
+    background: none;
+  }
+}
+
 .btn--has-arrow {
     position: relative;
     text-align: left;
