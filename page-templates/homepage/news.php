@@ -3,7 +3,7 @@
   </div>
   <div class="layout__col2 container border-right hidden-xs-border-right">
     <div class="row">
-      <div class="col-lg-9 col-md-10 offset-sm-1">
+      <div class="col-lg-9 col-sm-10 offset-sm-1">
         <div class="news-wrapper pt-7 pb-7">
           <h5 class="pl-6">—— News</h3>
           <h2 class="gradient-blue mt-3 ">Latest from us</h2>
@@ -42,7 +42,7 @@
           <a href="<?php echo get_permalink( get_page_by_path( 'news' ) ); ?>" class="btn btn-secondary">See more</a>
         </div>
       </div>
-      <div class="col-md-1 col-lg-2 hidden-xs-down">
+      <div class="col-md-1 col-lg-2 hidden-sm-down">
         <div class="anim_04" id="anim04"></div>
       </div>
     </div>
@@ -52,11 +52,12 @@
 </div>
 <div class="layout">
   <div class="layout__col1">
+    <div class="anim_line_6 hidden-sm-down"></div>
   </div>
   <div class="layout__col2 container border-right hidden-xs-border-right">
-    <div class="anim_06" id="anim06"></div>
+    <div class="anim_06 offset-sm-1 hidden-sm-down" id="anim06"></div>
     <div class="row no-gutters">
-      <div class="border-top border-left xs-border-right col-sm-1 offset-sm-11">
+      <div class="border-top border-left xs-border-right col-lg-1 offset-lg-11 col-md-2 offset-md-10">
         <div class="go-top">
           <a href="#" class="js-totop">⇡ Top</a>
         </div>

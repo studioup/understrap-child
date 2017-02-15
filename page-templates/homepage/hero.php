@@ -39,7 +39,7 @@ $scriptVersion = $detect->getScriptVersion();
       <div class="row no-gutters">
         <div class="col-sm-2"></div>
         <div class="col-sm-8 border-left-white hidden-xs-border-left border-right-white hidden-xs-border-right">
-          <div class="hero__main-content background-dotted-white">
+          <div class="hero__main-content background-pattern-white">
             <div class="hero__headlines">
               <h1>— <?php the_field('main_title') ?></h1>
               <h3><?php the_field('main_subtitle') ?></h3>

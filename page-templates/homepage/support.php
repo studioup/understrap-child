@@ -47,7 +47,7 @@
 </div>
 <div class="layout  no-overflow">
   <div class="layout__col1 border-right border-bottom background-pattern-red">
-
+      
   </div>
   <div class="layout__col2 container border-bottom">
     <div class="row">

@@ -15,3 +15,37 @@
   background-size: 22px;
 
 }
+
+.background-pattern-white {
+  background: url(../img/pattern-white.png);
+  background-repeat: repeat;
+  background-size: 20px;
+
+}
+
+
+.white-back {
+    position: relative;
+    &:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        width: calc(100% - 40px);
+        height: calc(100% - 20px);
+        background: white;
+        left: 0;
+        top: 0;
+        margin: 20px;
+        z-index: 0;
+        @include media-breakpoint-down(xs) {
+            height: calc(100% - 40px);
+        }
+    }
+    > * {
+        position: relative;
+    }
+    &.white-back--bottom:before {
+        margin-top: 0;
+        height: calc(100% - 20px);
+    }
+}

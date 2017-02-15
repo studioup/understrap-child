@@ -64,7 +64,7 @@ h4, .h4 {
   font-size: 1rem;
   letter-spacing: rem-calc(-0.3px);
   font-weight: 300;
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(sm) {
     font-size: 1.25rem;
   }
   @include media-breakpoint-up(lg) {

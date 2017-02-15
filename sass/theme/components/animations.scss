@@ -32,6 +32,19 @@
     }
 }
 
+.anim_06 {
+    width: rem-calc(143px);
+    &:before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      top: rem-calc(47px);
+      left: 0;
+      width: 10%;
+      border-bottom: 2px solid #d1dad7;
+      z-index: -1;
+    }
+}
 .pa_anim_01 {
   width: rem-calc(72px);
   left: rem-calc(-36px);
@@ -54,6 +67,15 @@
     top: 50%;
     margin-top: rem-calc(15px);
     position: relative;
+}
+
+.anim_line_6 {
+  border-bottom: 2px solid #d1dad7;
+  width: 100%;
+  left: 0%;
+  top: 20%;
+  margin-top: rem-calc(15px);
+  position: absolute;
 }
 
 .cr_anim_line {
@@ -79,4 +101,3 @@
     width: rem-calc(70px);
     top: rem-calc(5px);
 }
-

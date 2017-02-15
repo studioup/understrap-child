@@ -6,7 +6,7 @@ $terms = get_the_terms(get_the_ID(),"products-category");
 ?>
 <div class="js-page" data-jsid="product">
   <div class="layout">
-    <div class="layout__col1 border-bottom">
+    <div class="layout__col1 border-bottom hidden-sm-border-bottom">
     </div>
     <div class="layout__col2 container border-bottom hidden-sm-border-bottom">
       <div class="row no-gutters">
@@ -56,7 +56,7 @@ $terms = get_the_terms(get_the_ID(),"products-category");
               </div>
             </div>
             <div class="row no-gutters">
-              <div class="col-sm-12 border-left border-top">
+              <div class="col-sm-12 border-left border-top sm-border-bottom hidden-xs-border-bottom">
                 <div class="product__button text-center pt-3 pb-3">
                 <a href="#" class="btn btn-secondary">Power Calculator</a>
               </div>

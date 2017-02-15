@@ -40,3 +40,27 @@
       color: red;
     }
 }
+
+.btn-hover-icon {
+    position: relative;
+    .text {
+        transition: 0.3s ease opacity;
+    }
+    .icon {
+        position: absolute;
+        left: 50%;
+        width: 28px;
+        transform: translateX(-50%) translateY(-60%);
+        opacity: 0;
+        transition: 0.3s ease all;
+    }
+    &:hover {
+      .text {
+          opacity: 0;
+      }
+      .icon {
+          transform: translateX(-50%) translateY(-10%);
+          opacity: 1;
+      }
+    }
+}

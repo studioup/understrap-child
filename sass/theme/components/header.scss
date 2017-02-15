@@ -58,7 +58,7 @@
     position: relative;
     text-transform:uppercase;
     &:before {
-      @include media-breakpoint-up(sm){
+      @include media-breakpoint-up(md){
         content: ' ';
         position: absolute;
         width: calc(100% - 40px);
@@ -75,8 +75,10 @@
     &:hover, &:active {
       color: $aqua;
       &:before {
-        bottom: rem-calc(30px);
-        opacity: 1;
+        @include media-breakpoint-up(md){
+          bottom: rem-calc(30px);
+          opacity: 1;
+        }
       }
     }
     &:after, span {
@@ -84,7 +86,7 @@
     }
   }
   .dropdown:hover {
-    @include media-breakpoint-up(sm){
+    @include media-breakpoint-up(md){
       .dropdown-menu {
         display: block;
       }
@@ -92,8 +94,10 @@
     & > .nav-link {
       color: $aqua;
       &:before {
+        @include media-breakpoint-up(md){
         bottom: rem-calc(30px);
         opacity: 1;
+        }
       }
     }
   }
@@ -210,7 +214,7 @@
         right: rem-calc(-8px);
     }
     &:before {
-       @include media-breakpoint-up(sm){
+       @include media-breakpoint-up(md){
         border-bottom: 10px solid $aqua;
         border-left: 10px solid rgba(0, 0, 0, 0);
         border-right: 10px solid transparent;
@@ -227,7 +231,7 @@
       right: 10px;
    }
    &:after {
-     @include media-breakpoint-up(sm){
+     @include media-breakpoint-up(md){
        border-bottom: 9px solid #ffffff;
        border-left: 9px solid rgba(0, 0, 0, 0);
        border-right: 9px solid transparent;

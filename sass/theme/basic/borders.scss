@@ -1,14 +1,15 @@
 .border-bottom {
   border-bottom: rem-calc(1px) solid $aqua;
-  &.hidden-xs-border-bottom {
-    @include media-breakpoint-down(xs) {
-      border-bottom: 0;
-    }
+}
+
+.hidden-xs-border-bottom {
+  @include media-breakpoint-down(xs) {
+    border-bottom: 0 !important;
   }
-  &.hidden-sm-border-bottom {
-    @include media-breakpoint-down(sm) {
-      border-bottom: 0;
-    }
+}
+.hidden-sm-border-bottom {
+  @include media-breakpoint-down(sm) {
+    border-bottom: 0 !important;
   }
 }
 

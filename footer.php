@@ -38,11 +38,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</ul>
 					</div>
 					<div class="col-lg-4 offset-lg-2 col-sm-5 background-pattern-red border-left hidden-xs-border-left">
-						<div class="pl-5 pr-5 pt-5 pb-5">
+						<div class="pl-5 pr-5 pt-5 pb-5 white-back">
 							<h4>Info & Support</h4>
-							<a href="<?php echo get_permalink( get_page_by_path( 'contacts-support' ) ); ?>" class="mt-2 btn btn-secondary">Contact Now</a>
+							<a href="<?php echo get_permalink( get_page_by_path( 'contacts-support' ) ); ?>" class="mt-2 btn btn-secondary btn-hover-icon"><span class="text">Contact Now</span><span class="icon"><img src="<?php echo get_stylesheet_directory_uri() . '/img/envelope.svg'; ?>" /></span></a>
 							<h4 class="mt-4">Careers</h4>
-							<a href="<?php echo get_permalink( get_page_by_path( 'careers' ) ); ?>" class="mt-2 btn btn-secondary">Contact Now</a>
+							<a href="<?php echo get_permalink( get_page_by_path( 'careers' ) ); ?>" class="mt-2 btn btn-secondary btn-hover-icon"><span class="text">Contact Now</span><span class="icon"><img src="<?php echo get_stylesheet_directory_uri() . '/img/bag.svg'; ?>" /></span></a>
 						</div>
 					</div>
 					<div class="col-sm-1 border-left hidden-xs-down">
@@ -66,7 +66,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<li><a href="#">by Studio Up</a></li>
 						</ul>
 					</div>
-					<div class="col-lg-4 col-sm-5 background-pattern-red border-left hidden-xs-down">
+					<div class="col-lg-4 col-sm-5 white-back white-back--bottom background-pattern-red border-left hidden-xs-down">
 						<div class="pt-2">
 						</div>
 					</div>
