@@ -286,7 +286,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                           </div>
                         </div>
                         <div class="location__link border-top">
-                          <a href="#" class="btn btn-secondary btn-lg">Visit the website</a>
+                          <a href="#" class="btn btn-secondary">Visit the website</a>
                         </div>
                       </div>
                       <?php

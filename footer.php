@@ -41,7 +41,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="pl-5 pr-5 pt-5 pb-5 white-back">
 							<h4>Info & Support</h4>
 							<a href="<?php echo get_permalink( get_page_by_path( 'contacts-support' ) ); ?>" class="mt-2 btn btn-secondary btn-hover-icon"><span class="text">Contact Now</span><span class="icon"><img src="<?php echo get_stylesheet_directory_uri() . '/img/envelope.svg'; ?>" /></span></a>
-							<h4 class="mt-4">Careers</h4>
+							<h4 class="mt-5">Careers</h4>
 							<a href="<?php echo get_permalink( get_page_by_path( 'careers' ) ); ?>" class="mt-2 btn btn-secondary btn-hover-icon"><span class="text">Contact Now</span><span class="icon"><img src="<?php echo get_stylesheet_directory_uri() . '/img/bag.svg'; ?>" /></span></a>
 						</div>
 					</div>

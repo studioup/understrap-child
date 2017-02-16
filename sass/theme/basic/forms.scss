@@ -16,7 +16,7 @@
 [type="checkbox"]:checked + label:before {
   content: '';
   position: absolute;
-  left:0; top: rem-calc(2px);
+  left:0; top: rem-calc(5px);
   width: rem-calc(12px); height: rem-calc(11px);
   border: rem-calc(1px) solid $brand-primary;
   background: #fff;
@@ -75,6 +75,7 @@
         border: 0;
         border:1px solid $aqua;
         padding: rem-calc(22px);
+        border-radius: 0;
         outline-width: 0;
         border-bottom: 0;
         -webkit-appearance: none;
@@ -88,7 +89,11 @@
         border:1px solid $aqua;
         padding: rem-calc(22px);
         outline-width: 0;
+        border-radius: 0;
         border-bottom: 0;
+        -webkit-appearance: none;
+        -moz-appearance:    none;
+        appearance:         none;
         @include media-breakpoint-down(xs){
           border-bottom:1px solid $aqua;
         }
@@ -163,8 +168,18 @@
         }
         i {
           color: $red;
+          margin-left: rem-calc(-20px);
+          z-index: 0;
+          position: relative;
+          @include media-breakpoint-down(sm){
+            position: absolute;
+            right: rem-calc(30px);
+            top: rem-calc(26px);
+          }
         }
         select {
+          position: relative;
+          z-index: 1;
           border: 0;
           background: none;
           width: 100%;
@@ -172,6 +187,9 @@
           -webkit-appearance: none;
           -moz-appearance:    none;
           appearance:         none;
+          @include media-breakpoint-down(sm){
+            max-width:100%;
+          }
         }
     }
 }

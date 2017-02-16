@@ -54,7 +54,7 @@ $scriptVersion = $detect->getScriptVersion();
 
         <div class="col-sm-10 border-top-white border-right-white"></div>
           <div class="col-sm-2 border-top-white  border-right-white">
-            <div class="hero__scrolldown">
+            <div class="hero__scrolldown js-scrolldown  animated infinite pulse">
               <i class="fa fa-angle-down"></i> Scroll down
             </div>
           </div>

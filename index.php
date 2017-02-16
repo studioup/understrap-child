@@ -50,7 +50,7 @@ $container = get_theme_mod( 'understrap_container_type' );
       <div class="layout__col2 border-left hidden-xs-border-left container ">
         <div class="row">
           <div class="col-md-10 col-sm-12 ">
-            <div class="row pt-3">
+            <div class="row pt-6">
           <?php if ( have_posts() ) : ?>
 
   					<?php /* Start the Loop */ ?>
@@ -76,7 +76,7 @@ $container = get_theme_mod( 'understrap_container_type' );
   				<?php endif; ?>
           </div>
           <div class="row">
-            <div class="col-sm-10 offset-sm-1">
+            <div class="col-sm-10 pt-5 offset-sm-1">
               <?php understrap_pagination(); ?>
             </div>
           </div>

@@ -5,11 +5,20 @@
     &.support__corner--lt {
         left: 0;
         top:0;
+        animation-name: anim_01;
+       animation-duration: 1s;
+       animation-iteration-count: infinite;
+       animation-direction: alternate;
     }
     &.support__corner--rb {
         right: 0;
         bottom:0;
         transform: rotate(180deg);
+        animation-name: anim_02;
+       animation-duration: 1s;
+       animation-iteration-count: infinite;
+       animation-direction: alternate;
+       animation-delay: .5s;
     }
   }
   .support__grid {
@@ -31,4 +40,13 @@
     position: absolute;
     bottom: 0;
   }
+}
+
+@keyframes anim_01 {
+    from {transform: translate3d(0px,0px,0) ;}
+    to {transform: translate3d(10px,10px,0);}
+}
+@keyframes anim_02 {
+    from {transform: translate3d(0px,0px,0) rotate(180deg);}
+    to {transform: translate3d(-10px,-10px,0) rotate(180deg);}
 }

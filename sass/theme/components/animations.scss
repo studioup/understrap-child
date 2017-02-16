@@ -65,7 +65,7 @@
     width: 80%;
     left: 20%;
     top: 50%;
-    margin-top: rem-calc(15px);
+    margin-top: rem-calc(16px);
     position: relative;
 }
 
@@ -73,7 +73,7 @@
   border-bottom: 2px solid #d1dad7;
   width: 100%;
   left: 0%;
-  top: 20%;
+  top: rem-calc(32px);
   margin-top: rem-calc(15px);
   position: absolute;
 }
@@ -83,7 +83,7 @@
     width: 80%;
     left: 20%;
     top: 50%;
-    margin-top: rem-calc(-4px);
+    margin-top: rem-calc(-3px);
     position: relative;
 }
 

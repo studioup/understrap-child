@@ -85,8 +85,8 @@
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="nav__login-minisection">
-                <button class="btn btn-lg btn-secondary" value="Log In" type="submit">Log In</button>
+              <div class="nav__login-minisection nav__login-minisection--login">
+                <button class="btn  btn-secondary" value="Log In" type="submit">Log In</button>
               </div>
             </div>
           </div>

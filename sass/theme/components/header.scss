@@ -153,6 +153,9 @@
   .navbar-alt {
     .nav-link {
       padding: 0 rem-calc(3px);
+      @include media-breakpoint-up(lg){
+        padding: 0 rem-calc(10px);
+      }
       @include media-breakpoint-down(sm){
         line-height: rem-calc(30px);
         height: auto;
@@ -228,7 +231,7 @@
    }
    &.dropdown-menu-right:before {
       left: inherit;
-      right: 10px;
+      right: 17px;
    }
    &:after {
      @include media-breakpoint-up(md){
@@ -245,7 +248,7 @@
    }
    &.dropdown-menu-right:after {
       left: inherit;
-      right: 11px;
+      right: 18px;
    }
    .menu-item {
      border-bottom:rem-calc(1px) solid $aqua;
@@ -258,7 +261,7 @@
        height: auto;
        font-size: rem-calc(18px);
        line-height: 1;
-       @extend .background-dotted-red;
+       @extend .background-pattern-red;
        text-transform: initial;
         @include media-breakpoint-down(sm){
               padding: rem-calc(21px) rem-calc(20px);
@@ -286,6 +289,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      &.nav__login-minisection--login {
+        height: 100%;
+    padding-top: 0;
+      }
     }
     .form-check {
       margin: 0;

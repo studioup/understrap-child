@@ -25,11 +25,11 @@
         color:$green;
       }
       left: 2px;
-      bottom: 113px;
-      top: inherit;
+
+      top: rem-calc(20px);
       transform: inherit;
       @include media-breakpoint-up(lg) {
-        left: rem-calc(-59px);
+        left: rem-calc(-58px);
       }
   }
 
@@ -40,20 +40,21 @@
         color:$green;
       }
       right: inherit;
-      top: inherit;
-      bottom: 0px;
+      top: rem-calc(145px);
+
       left: 2px;
       transform: inherit;
       @include media-breakpoint-up(lg) {
-        left: rem-calc(-59px);
+        left: rem-calc(-58px);
       }
   }
 
   .slick-dots {
-    bottom: rem-calc(-10px);
+    bottom: rem-calc(-20px);
 
     @include media-breakpoint-up(sm) {
-      bottom: rem-calc(30px);
+      top: rem-calc(50px);
+      bottom: inherit;
 
       width: rem-calc(30px);
     }

@@ -52,7 +52,7 @@ $container = get_theme_mod( 'understrap_container_type' );
       <div class="layout__col2 border-left container ">
         <div class="row">
           <div class="col-sm-10 ">
-            <div class="row pt-3">
+            <div class="row pt-5">
           <?php if ( have_posts() ) : ?>
 
   					<?php /* Start the Loop */ ?>

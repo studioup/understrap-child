@@ -53,12 +53,21 @@ $lowHeight: rem-calc(74px);
     @include media-breakpoint-up(lg) {
       min-height: $mainHeight;
     }
+    @include media-breakpoint-up(xl) {
+      min-height: $mainHeight;
+      height: 30vw;
+    }
   }
   .hero__scrolldown {
     text-align: center;
     color: white;
     line-height: $lowHeight;
     width: 100%;
+    cursor: pointer;
+    animation-play-state: paused;
+    &:hover {
+      animation-play-state: running;
+    }
   }
   .hero__headlines {
       position: relative;

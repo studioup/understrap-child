@@ -183,7 +183,7 @@ $container = get_theme_mod( 'understrap_container_type' );
       <div class="layout__col1">
       </div>
       <div class="layout__col2 container border-right hidden-xs-border-right">
-        <div class="anim_06" id="anim06"></div>
+        
         <div class="row no-gutters">
           <div class="border-top border-left xs-border-right col-lg-1 col-md-2 offset-lg-11 offset-sm-10">
             <div class="go-top">

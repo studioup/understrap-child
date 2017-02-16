@@ -1,0 +1,16 @@
+a {
+  color: $aqua;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.paragraph, .font-big {
+  a {
+    border-bottom: 1px solid $red;
+    &:hover {
+      color: darken($aqua,10);
+      text-decoration: none;
+    }
+  }
+}

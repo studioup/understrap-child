@@ -164,6 +164,9 @@ gulp.task('copy-assets', function() {
     gulp.src(basePaths.bower + 'cookies-enabler/*.js')
       .pipe(gulp.dest(basePaths.dev + '/js'));
 
+    gulp.src(basePaths.bower + 'animate.css/*.css')
+      .pipe(gulp.dest(basePaths.dev + '/css'));
+
 // Copy all Bootstrap JS files
     gulp.src(basePaths.node + 'bootstrap/dist/js/**/*.js')
        .pipe(gulp.dest(basePaths.dev + '/js/bootstrap4'));
