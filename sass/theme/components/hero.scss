@@ -6,7 +6,14 @@ $lowHeight: rem-calc(74px);
 
   background-position: center center;
   background-size: cover;
-  .hero__video-sf {
+  .hero__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+  }
+  .hero__video-sf, .hero__bg-sf {
     position: absolute;
     width: 100%;
     height: 100%;

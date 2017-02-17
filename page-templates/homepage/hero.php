@@ -13,7 +13,7 @@ $scriptVersion = $detect->getScriptVersion();
 
 ?>
 
-<div class="hero layout no-overflow" style="background-image:url(<?php echo $image_attributes[0]; ?>)">
+<div class="hero layout no-overflow">
   <?php if (!$noVideo) { ?>
   <div class="hero__video-container">
     <div class="hero__video-sf"></div>
@@ -23,7 +23,12 @@ $scriptVersion = $detect->getScriptVersion();
                   Your browser does not support the video tag. I suggest you upgrade your browser.
   </video>
   </div>
-  <?php } ?>
+  <?php }else{ ?>
+    <div class="hero__bg" style="background-image:url(<?php echo $image_attributes[0]; ?>)">
+      <div class="hero__bg-sf"></div>
+    </div>
+
+    <?php } ?>
   <div class="layout__col1">
       <div class="hero__height1 border-top-white">
       </div>
